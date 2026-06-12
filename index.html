@@ -1,0 +1,2220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f0c29" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="WorkTracker" />
+  <title>WorkTracker</title>
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPGRlZnM+CiAgICA8IS0tIEJyb3duIGdyYWRpZW50IGJhY2tncm91bmQgKFVQUy1zdHlsZSkgLS0+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1QzNBMUU7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNEEyQzE0O3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMzQTIwMTA7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgoKICAgIDwhLS0gR29sZCBncmFkaWVudCBmb3Igc2hpZWxkIC0tPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzaGllbGRHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1Qzg0MjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI0MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNFOEE4MDA7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0M2OEEwMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CgogICAgPCEtLSBHb2xkIGdyYWRpZW50IGZvciBlbGVtZW50cyAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZEdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRDg0RDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRDQ5MDBBO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KCiAgICA8IS0tIElubmVyIHNoaW5lIG9uIHNoaWVsZCAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpbmVHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjYwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZGMEEwO3N0b3Atb3BhY2l0eTowLjM1IiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkYwQTA7c3RvcC1vcGFjaXR5OjAiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgoKICAgIDwhLS0gRHJvcCBzaGFkb3cgZmlsdGVyIC0tPgogICAgPGZpbHRlciBpZD0ic2hhZG93IiB4PSItMTUlIiB5PSItMTUlIiB3aWR0aD0iMTMwJSIgaGVpZ2h0PSIxMzAlIj4KICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjYiIHN0ZERldmlhdGlvbj0iMTAiIGZsb29kLWNvbG9yPSIjMUEwQTAwIiBmbG9vZC1vcGFjaXR5PSIwLjUiLz4KICAgIDwvZmlsdGVyPgoKICAgIDwhLS0gU3VidGxlIGlubmVyIHNoYWRvdyBvbiBpY29uIGJhY2tncm91bmQgLS0+CiAgICA8ZmlsdGVyIGlkPSJpbm5lclNoYWRvdyI+CiAgICAgIDxmZU9mZnNldCBkeD0iMCIgZHk9IjMiLz4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNCIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZUNvbXBvc2l0ZSBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJibHVyIiBvcGVyYXRvcj0ib3ZlciIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgoKICA8IS0tIEJyb3duIGdyYWRpZW50IGJhY2tncm91bmQgcmVtb3ZlZCBmb3IgdHJhbnNwYXJlbmN5IC0tPgogIDwhLS0gVVBTLXN0eWxlIHNoaWVsZCBzaGFwZSAtLT4KICA8cGF0aCBkPSJNMjU2IDc4CiAgICAgICAgICAgICBMMzcwIDExOAogICAgICAgICAgICAgTDM3MCAyODAKICAgICAgICAgICAgIFEzNzAgMzcwIDI1NiA0MzQKICAgICAgICAgICAgIFExNDIgMzcwIDE0MiAyODAKICAgICAgICAgICAgIEwxNDIgMTE4CiAgICAgICAgICAgICBaIgogICAgICAgIGZpbGw9InVybCgjc2hpZWxkR3JhZCkiCiAgICAgICAgZmlsdGVyPSJ1cmwoI3NoYWRvdykiIC8+CgogIDwhLS0gU2hpZWxkIGlubmVyIHNoaW5lIC0tPgogIDxwYXRoIGQ9Ik0yNTYgNzgKICAgICAgICAgICAgIEwzNzAgMTE4CiAgICAgICAgICAgICBMMzcwIDI4MAogICAgICAgICAgICAgUTM3MCAzNzAgMjU2IDQzNAogICAgICAgICAgICAgUTE0MiAzNzAgMTQyIDI4MAogICAgICAgICAgICAgTDE0MiAxMTgKICAgICAgICAgICAgIFoiCiAgICAgICAgZmlsbD0idXJsKCNzaGluZUdyYWQpIiAvPgoKICA8IS0tIFNoaWVsZCBib3JkZXIgLS0+CiAgPHBhdGggZD0iTTI1NiA3OAogICAgICAgICAgICAgTDM3MCAxMTgKICAgICAgICAgICAgIEwzNzAgMjgwCiAgICAgICAgICAgICBRMzcwIDM3MCAyNTYgNDM0CiAgICAgICAgICAgICBRMTQyIDM3MCAxNDIgMjgwCiAgICAgICAgICAgICBMMTQyIDExOAogICAgICAgICAgICAgWiIKICAgICAgICBmaWxsPSJub25lIgogICAgICAgIHN0cm9rZT0iI0M2OEEwMCIKICAgICAgICBzdHJva2Utd2lkdGg9IjMiCiAgICAgICAgb3BhY2l0eT0iMC42Ii8+CgogIDwhLS0gQ2xvY2sgZmFjZSAoaW5zaWRlIHNoaWVsZCkgLS0+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjQwIiByPSI4MiIgZmlsbD0iIzRBMkMxNCIgb3BhY2l0eT0iMC45MiIvPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI0MCIgcj0iNzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y1Qzg0MiIgc3Ryb2tlLXdpZHRoPSI0IiBvcGFjaXR5PSIwLjkiLz4KCiAgPCEtLSBDbG9jayB0aWNrIG1hcmtzIC0tPgogIDxnIHN0cm9rZT0iI0Y1Qzg0MiIgc3Ryb2tlLXdpZHRoPSIzLjUiIG9wYWNpdHk9IjAuODUiPgogICAgPCEtLSAxMiAtLT4KICAgIDxsaW5lIHgxPSIyNTYiIHkxPSIxNzIiIHgyPSIyNTYiIHkyPSIxODMiLz4KICAgIDwhLS0gMyAtLT4KICAgIDxsaW5lIHgxPSIzMjQiIHkxPSIyNDAiIHgyPSIzMTMiIHkyPSIyNDAiLz4KICAgIDwhLS0gNiAtLT4KICAgIDxsaW5lIHgxPSIyNTYiIHkxPSIzMDgiIHgyPSIyNTYiIHkyPSIyOTciLz4KICAgIDwhLS0gOSAtLT4KICAgIDxsaW5lIHgxPSIxODgiIHkxPSIyNDAiIHgyPSIxOTkiIHkyPSIyNDAiLz4KICAgIDwhLS0gTWlub3IgdGlja3MgLS0+CiAgICA8bGluZSB4MT0iMjk0IiB5MT0iMTc1IiB4Mj0iMjg5IiB5Mj0iMTg1IiBvcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIzMjAiIHkxPSIyMDIiIHgyPSIzMTEiIHkyPSIyMDciIG9wYWNpdHk9IjAuNSIvPgogICAgPGxpbmUgeDE9IjMyMCIgeTE9IjI3OCIgeDI9IjMxMSIgeTI9IjI3MyIgb3BhY2l0eT0iMC41Ii8+CiAgICA8bGluZSB4MT0iMjk0IiB5MT0iMzA1IiB4Mj0iMjg5IiB5Mj0iMjk1IiBvcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIyMTgiIHkxPSIzMDUiIHgyPSIyMjMiIHkyPSIyOTUiIG9wYWNpdHk9IjAuNSIvPgogICAgPGxpbmUgeDE9IjE5MiIgeTE9IjI3OCIgeDI9IjIwMSIgeTI9IjI3MyIgb3BhY2l0eT0iMC41Ii8+CiAgICA8bGluZSB4MT0iMTkyIiB5MT0iMjAyIiB4Mj0iMjAxIiB5Mj0iMjA3IiBvcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIyMTgiIHkxPSIxNzUiIHgyPSIyMjMiIHkyPSIxODUiIG9wYWNpdHk9IjAuNSIvPgogIDwvZz4KCiAgPCEtLSBDbG9jayBoYW5kcyAtLT4KICA8IS0tIEhvdXIgaGFuZCAocG9pbnRpbmcgfjEwIG8nY2xvY2spIC0tPgogIDxsaW5lIHgxPSIyNTYiIHkxPSIyNDAiIHgyPSIyMjYiIHkyPSIyMDciCiAgICAgICAgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE1pbnV0ZSBoYW5kIChwb2ludGluZyB+MTIpIC0tPgogIDxsaW5lIHgxPSIyNTYiIHkxPSIyNDAiIHgyPSIyNTYiIHkyPSIxODUiCiAgICAgICAgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIENlbnRlciBkb3QgLS0+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjQwIiByPSI2IiBmaWxsPSIjRjVDODQyIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjQwIiByPSIzIiBmaWxsPSIjNUMzQTFFIi8+CgogIDwhLS0gIldUIiBsZXR0ZXJzIGJlbG93IGNsb2NrLCBpbnNpZGUgc2hpZWxkIC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzI2IgogICAgICAgIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIKICAgICAgICBmb250LXNpemU9IjMyIgogICAgICAgIGZvbnQtd2VpZ2h0PSJib2xkIgogICAgICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgICAgZmlsbD0iIzRBMkMxNCIKICAgICAgICBsZXR0ZXItc3BhY2luZz0iNCI+V1Q8L3RleHQ+CgogIDwhLS0gQm90dG9tIGxhYmVsIG91dHNpZGUgc2hpZWxkIC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iNDc4IgogICAgICAgIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIKICAgICAgICBmb250LXNpemU9IjI4IgogICAgICAgIGZvbnQtd2VpZ2h0PSJib2xkIgogICAgICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgICAgZmlsbD0iI0Y1Qzg0MiIKICAgICAgICBsZXR0ZXItc3BhY2luZz0iMyIKICAgICAgICBvcGFjaXR5PSIwLjkiPldPUktUUkFDS0VSPC90ZXh0Pgo8L3N2Zz4K"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPGRlZnM+CiAgICA8IS0tIEJyb3duIGdyYWRpZW50IGJhY2tncm91bmQgKFVQUy1zdHlsZSkgLS0+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1QzNBMUU7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNEEyQzE0O3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMzQTIwMTA7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgoKICAgIDwhLS0gR29sZCBncmFkaWVudCBmb3Igc2hpZWxkIC0tPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzaGllbGRHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1Qzg0MjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI0MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNFOEE4MDA7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0M2OEEwMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CgogICAgPCEtLSBHb2xkIGdyYWRpZW50IGZvciBlbGVtZW50cyAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZEdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRDg0RDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRDQ5MDBBO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KCiAgICA8IS0tIElubmVyIHNoaW5lIG9uIHNoaWVsZCAtLT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpbmVHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjYwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZGMEEwO3N0b3Atb3BhY2l0eTowLjM1IiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkYwQTA7c3RvcC1vcGFjaXR5OjAiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgoKICAgIDwhLS0gRHJvcCBzaGFkb3cgZmlsdGVyIC0tPgogICAgPGZpbHRlciBpZD0ic2hhZG93IiB4PSItMTUlIiB5PSItMTUlIiB3aWR0aD0iMTMwJSIgaGVpZ2h0PSIxMzAlIj4KICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjYiIHN0ZERldmlhdGlvbj0iMTAiIGZsb29kLWNvbG9yPSIjMUEwQTAwIiBmbG9vZC1vcGFjaXR5PSIwLjUiLz4KICAgIDwvZmlsdGVyPgoKICAgIDwhLS0gU3VidGxlIGlubmVyIHNoYWRvdyBvbiBpY29uIGJhY2tncm91bmQgLS0+CiAgICA8ZmlsdGVyIGlkPSJpbm5lclNoYWRvdyI+CiAgICAgIDxmZU9mZnNldCBkeD0iMCIgZHk9IjMiLz4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNCIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZUNvbXBvc2l0ZSBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJibHVyIiBvcGVyYXRvcj0ib3ZlciIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgoKICA8IS0tIEJyb3duIGdyYWRpZW50IGJhY2tncm91bmQgcmVtb3ZlZCBmb3IgdHJhbnNwYXJlbmN5IC0tPgogIDwhLS0gVVBTLXN0eWxlIHNoaWVsZCBzaGFwZSAtLT4KICA8cGF0aCBkPSJNMjU2IDc4CiAgICAgICAgICAgICBMMzcwIDExOAogICAgICAgICAgICAgTDM3MCAyODAKICAgICAgICAgICAgIFEzNzAgMzcwIDI1NiA0MzQKICAgICAgICAgICAgIFExNDIgMzcwIDE0MiAyODAKICAgICAgICAgICAgIEwxNDIgMTE4CiAgICAgICAgICAgICBaIgogICAgICAgIGZpbGw9InVybCgjc2hpZWxkR3JhZCkiCiAgICAgICAgZmlsdGVyPSJ1cmwoI3NoYWRvdykiIC8+CgogIDwhLS0gU2hpZWxkIGlubmVyIHNoaW5lIC0tPgogIDxwYXRoIGQ9Ik0yNTYgNzgKICAgICAgICAgICAgIEwzNzAgMTE4CiAgICAgICAgICAgICBMMzcwIDI4MAogICAgICAgICAgICAgUTM3MCAzNzAgMjU2IDQzNAogICAgICAgICAgICAgUTE0MiAzNzAgMTQyIDI4MAogICAgICAgICAgICAgTDE0MiAxMTgKICAgICAgICAgICAgIFoiCiAgICAgICAgZmlsbD0idXJsKCNzaGluZUdyYWQpIiAvPgoKICA8IS0tIFNoaWVsZCBib3JkZXIgLS0+CiAgPHBhdGggZD0iTTI1NiA3OAogICAgICAgICAgICAgTDM3MCAxMTgKICAgICAgICAgICAgIEwzNzAgMjgwCiAgICAgICAgICAgICBRMzcwIDM3MCAyNTYgNDM0CiAgICAgICAgICAgICBRMTQyIDM3MCAxNDIgMjgwCiAgICAgICAgICAgICBMMTQyIDExOAogICAgICAgICAgICAgWiIKICAgICAgICBmaWxsPSJub25lIgogICAgICAgIHN0cm9rZT0iI0M2OEEwMCIKICAgICAgICBzdHJva2Utd2lkdGg9IjMiCiAgICAgICAgb3BhY2l0eT0iMC42Ii8+CgogIDwhLS0gQ2xvY2sgZmFjZSAoaW5zaWRlIHNoaWVsZCkgLS0+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjQwIiByPSI4MiIgZmlsbD0iIzRBMkMxNCIgb3BhY2l0eT0iMC45MiIvPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjI0MCIgcj0iNzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Y1Qzg0MiIgc3Ryb2tlLXdpZHRoPSI0IiBvcGFjaXR5PSIwLjkiLz4KCiAgPCEtLSBDbG9jayB0aWNrIG1hcmtzIC0tPgogIDxnIHN0cm9rZT0iI0Y1Qzg0MiIgc3Ryb2tlLXdpZHRoPSIzLjUiIG9wYWNpdHk9IjAuODUiPgogICAgPCEtLSAxMiAtLT4KICAgIDxsaW5lIHgxPSIyNTYiIHkxPSIxNzIiIHgyPSIyNTYiIHkyPSIxODMiLz4KICAgIDwhLS0gMyAtLT4KICAgIDxsaW5lIHgxPSIzMjQiIHkxPSIyNDAiIHgyPSIzMTMiIHkyPSIyNDAiLz4KICAgIDwhLS0gNiAtLT4KICAgIDxsaW5lIHgxPSIyNTYiIHkxPSIzMDgiIHgyPSIyNTYiIHkyPSIyOTciLz4KICAgIDwhLS0gOSAtLT4KICAgIDxsaW5lIHgxPSIxODgiIHkxPSIyNDAiIHgyPSIxOTkiIHkyPSIyNDAiLz4KICAgIDwhLS0gTWlub3IgdGlja3MgLS0+CiAgICA8bGluZSB4MT0iMjk0IiB5MT0iMTc1IiB4Mj0iMjg5IiB5Mj0iMTg1IiBvcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIzMjAiIHkxPSIyMDIiIHgyPSIzMTEiIHkyPSIyMDciIG9wYWNpdHk9IjAuNSIvPgogICAgPGxpbmUgeDE9IjMyMCIgeTE9IjI3OCIgeDI9IjMxMSIgeTI9IjI3MyIgb3BhY2l0eT0iMC41Ii8+CiAgICA8bGluZSB4MT0iMjk0IiB5MT0iMzA1IiB4Mj0iMjg5IiB5Mj0iMjk1IiBvcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIyMTgiIHkxPSIzMDUiIHgyPSIyMjMiIHkyPSIyOTUiIG9wYWNpdHk9IjAuNSIvPgogICAgPGxpbmUgeDE9IjE5MiIgeTE9IjI3OCIgeDI9IjIwMSIgeTI9IjI3MyIgb3BhY2l0eT0iMC41Ii8+CiAgICA8bGluZSB4MT0iMTkyIiB5MT0iMjAyIiB4Mj0iMjAxIiB5Mj0iMjA3IiBvcGFjaXR5PSIwLjUiLz4KICAgIDxsaW5lIHgxPSIyMTgiIHkxPSIxNzUiIHgyPSIyMjMiIHkyPSIxODUiIG9wYWNpdHk9IjAuNSIvPgogIDwvZz4KCiAgPCEtLSBDbG9jayBoYW5kcyAtLT4KICA8IS0tIEhvdXIgaGFuZCAocG9pbnRpbmcgfjEwIG8nY2xvY2spIC0tPgogIDxsaW5lIHgxPSIyNTYiIHkxPSIyNDAiIHgyPSIyMjYiIHkyPSIyMDciCiAgICAgICAgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIE1pbnV0ZSBoYW5kIChwb2ludGluZyB+MTIpIC0tPgogIDxsaW5lIHgxPSIyNTYiIHkxPSIyNDAiIHgyPSIyNTYiIHkyPSIxODUiCiAgICAgICAgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIENlbnRlciBkb3QgLS0+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjQwIiByPSI2IiBmaWxsPSIjRjVDODQyIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjQwIiByPSIzIiBmaWxsPSIjNUMzQTFFIi8+CgogIDwhLS0gIldUIiBsZXR0ZXJzIGJlbG93IGNsb2NrLCBpbnNpZGUgc2hpZWxkIC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzI2IgogICAgICAgIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIKICAgICAgICBmb250LXNpemU9IjMyIgogICAgICAgIGZvbnQtd2VpZ2h0PSJib2xkIgogICAgICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgICAgZmlsbD0iIzRBMkMxNCIKICAgICAgICBsZXR0ZXItc3BhY2luZz0iNCI+V1Q8L3RleHQ+CgogIDwhLS0gQm90dG9tIGxhYmVsIG91dHNpZGUgc2hpZWxkIC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iNDc4IgogICAgICAgIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIKICAgICAgICBmb250LXNpemU9IjI4IgogICAgICAgIGZvbnQtd2VpZ2h0PSJib2xkIgogICAgICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgICAgZmlsbD0iI0Y1Qzg0MiIKICAgICAgICBsZXR0ZXItc3BhY2luZz0iMyIKICAgICAgICBvcGFjaXR5PSIwLjkiPldPUktUUkFDS0VSPC90ZXh0Pgo8L3N2Zz4K"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body { background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); min-height: 100vh; font-family: 'DM Mono', 'Courier New', monospace; color: #e8e0f0; }
+    input, select, textarea, button { font-family: inherit; }
+    input[type=date]::-webkit-calendar-picker-indicator { filter: invert(1); }
+    input[type=time]::-webkit-calendar-picker-indicator { filter: invert(1); }
+    select option { background: #1a1535; color: #fff; }
+    ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: rgba(167,139,250,0.3); border-radius: 2px; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+const STORAGE_KEY = "arbeitszeit_eintraege";
+const CONFIG_KEY  = "arbeitszeit_config";
+
+const DEFAULT_TAGESTYPEN = [
+  { id: "arbeit",    label: "Arbeit",       icon: "💼", color: "#a78bfa", zaehlt: true,  bezahlt: true  },
+  { id: "urlaub",    label: "Urlaub",       icon: "🏖️", color: "#38bdf8", zaehlt: false, bezahlt: true  },
+  { id: "krank",     label: "Krank",        icon: "🤒", color: "#f87171", zaehlt: false, bezahlt: true  },
+  { id: "kindkrank", label: "Kind krank",   icon: "👶", color: "#fb923c", zaehlt: false, bezahlt: true  },
+  { id: "frei",      label: "Frei",         icon: "😴", color: "#6b7280", zaehlt: false, bezahlt: false },
+  { id: "wochenende",label: "Wochenende",   icon: "🌅", color: "#94a3b8", zaehlt: false, bezahlt: false },
+  { id: "feiertag",  label: "Feiertag",     icon: "🎉", color: "#facc15", zaehlt: false, bezahlt: true  },
+  { id: "homeoffice",label: "Homeoffice",   icon: "🏠", color: "#34d399", zaehlt: true,  bezahlt: true  },
+];
+
+const KRANKENKASSEN = [
+  ["AOK Baden-Württemberg",2.99],["AOK Bayern",2.69],["AOK Bremen/Bremerhaven",3.29],
+  ["AOK Hessen",2.98],["AOK Niedersachsen",3.40],["AOK NordWest",3.25],
+  ["AOK Nordost",2.89],["AOK Plus",3.19],["AOK Rheinland-Pfalz/Saarland",2.47],
+  ["AOK Rheinland/Hamburg",3.39],["AOK Sachsen-Anhalt",2.89],
+  ["BARMER",3.29],["DAK-Gesundheit",3.20],["Techniker Krankenkasse (TK)",2.69],
+  ["KKH",3.78],["hkk",2.59],["HEK",2.89],
+  ["IKK classic",3.40],["IKK Südwest",3.87],
+  ["BKK firmus",2.18],["BKK Public",2.50],["BKK Linde",2.99],
+  ["BKK VBU",3.19],["BKK24",4.39],["BKK Herkules",4.38],
+  ["Knappschaft",4.30],["Mhplus BKK",3.19],
+  ["Sonstige / Eigener Wert",null],
+].sort((a,b)=>a[0].localeCompare(b[0]));
+
+const defaultConfig = {
+  stundenlohn: 10.06, regelarbeitszeit: 7.6, ueberstundenZuschlag: 25,
+  steuerklasse: 1, kirchensteuer: false, bundesland: "BY", kinderfreibetrage: 0,
+  tagestypen: DEFAULT_TAGESTYPEN,
+  dezimalformat: false,
+  spesenBetrag: 6.60,
+  spesenMindestStunden: 8.0,
+  kleiderreinigungBetrag: 0.90,
+  ueberstundenMindestStunden: 8.0,
+  zusatzAbzuege: [],
+  zusatzBezuege: [],
+  urlaubstageProJahr: 28,
+  defaultStart: "07:00",
+  defaultEnde: "15:36",
+  defaultPause: "30",
+  defaultNachtStart: "22:00",
+  defaultNachtEnde: "06:00",
+  bav: 0,
+  vl: 0,
+  nachtschichtzulage: 25,
+  manuellerEffektivlohn: 0,
+  erwartetesJahresbrutto: 0,
+  krankenkasse: "AOK Hessen",
+  kvZusatz: 2.98,
+  lohnVerlauf: [], // [{ab: "YYYY-MM", lohn: 12.34}] – Stundenlohnhistorie
+  // App-Einstellungen
+  appName: "WorkTracker",
+  appAccentColor: "#a78bfa",
+  appStartView: "erfassen",
+  appWaehrung: "€",
+  appKompaktansicht: false,
+  appHintergrund: "linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%)",
+  appSprache: "de",
+};
+
+
+// ── ÜBERSETZUNGEN / TRANSLATIONS ──
+const TRANSLATIONS = {
+  de: {
+    // Header
+    zeiterfassung: "Zeiterfassung",
+    // Bottom nav
+    nav_erfassen: "Erfassen", nav_woche: "Woche", nav_monat: "Monat",
+    nav_jahr: "Jahr", nav_netto: "Netto", nav_einstellungen: "Einstellungen",
+    // Erfassen
+    tagestyp: "Tagestyp",
+    beginn: "Beginn", ende: "Ende",
+    pause_min: "Pause (Minuten)",
+    tour: "Tour",
+    km: "Gefahrene Kilometer (km)",
+    kraftstoff_l: "Kraftstoff (L)",
+    kunden: "Kunden",
+    abholer: "Abholer",
+    tagesnotiz: "Tagesnotiz",
+    notiz_placeholder: "Was war heute besonders?",
+    tour_placeholder: "z.B. Tour 1, Stadtgebiet...",
+    tagesergebnis: "Tagesergebnis",
+    arbeitszeit: "Arbeitszeit",
+    ueberstunden: "Überstunden",
+    normallohn: "Normallohn",
+    ueberstundenzuschl: "Überstundenzuschl.",
+    gesamt_brutto: "Gesamt Brutto",
+    spesen: "Spesen",
+    spesen_ab: "Spesen (ab",
+    noch: "noch",
+    nicht_erfasst: "– nicht erfasst",
+    // Monat/Woche/Jahr
+    monatsuebersicht: "Monatsübersicht",
+    wochenuebersicht: "Wochenübersicht",
+    jahresuebersicht: "Jahreszusammenfassung",
+    gesamtstunden: "Gesamtstunden",
+    bruttolohn: "Bruttolohn",
+    gefahrene_km: "Gefahrene km",
+    kraftstoff: "Kraftstoff",
+    kunden_gesamt: "Kunden gesamt",
+    abholer_gesamt: "Abholer gesamt",
+    spesen_gesamt: "Spesen gesamt",
+    kleiderreinigung: "👕 Kleiderreinigung",
+    urlaubstage: "🏖️ Urlaubstage",
+    feiertage: "🎉 Feiertage",
+    kranktage: "🤒 Kranktage",
+    stunden_inkl: "⏱ Stunden gesamt (inkl. Abwesenheiten)",
+    effektivlohn: "📊 Effektivlohn:",
+    manuell: "(manuell)",
+    durchschnitt: "(Ø letzte 3 Monate)",
+    keine_eintraege_monat: "Keine Einträge diesen Monat",
+    kw: "KW",
+    arbeitstage: "Arbeitstage",
+    keine_eintraege: "Keine Einträge",
+    nachtstunden: "🌙 Nachtstunden",
+    nachtzulage: "🌙 Nachtzulage",
+    // Netto
+    brutto_netto: "Brutto → Netto",
+    lohnberechnung: "Lohnberechnung",
+    normalstunden: "Normalstunden",
+    ueberstunden_label: "Überstunden",
+    urlaubslohn: "Urlaubslohn",
+    feiertagsbez: "Feiertagsbezahlung",
+    kranklohn: "Kranklohn",
+    kindkrank_bez: "Kind krank bezahlt",
+    spesen_steuerfrei: "Spesen (steuerfrei)",
+    einmalig_brutto: "💸 Einmalzahlungen (Brutto)",
+    gesamtbrutto: "Gesamtbrutto",
+    sozialversicherung: "Sozialversicherung",
+    rentenversicherung: "Rentenversicherung",
+    arbeitslosenversicherung: "Arbeitslosenversicherung",
+    krankenversicherung: "Krankenversicherung (Basis)",
+    pflegeversicherung: "Pflegeversicherung",
+    sv_gesamt: "SV gesamt",
+    steuern: "Steuern",
+    lohnsteuer: "Lohnsteuer",
+    solidaritaetszuschlag: "Solidaritätszuschlag",
+    kirchensteuer: "Kirchensteuer",
+    zusatzabzuege: "Zusatzabzüge",
+    gesamt_steuerfrei: "Gesamt steuerfrei",
+    einmalig_netto_label: "Einmalig auf Netto",
+    einmalig_netto: "💸 Einmalzahlungen (Netto)",
+    einmalig_abzuege: "💸 Einmalige Abzüge",
+    nettolohn: "Nettolohn",
+    abzuege: "Abzüge:",
+    erfasse_zuerst: "⚠️ Erfasse zuerst Arbeitstage im gewählten Monat.",
+    einmalig_abzuege_titel: "💸 Einmalzahlungen & Abzüge",
+    einmalig_hint: "z.B. Weihnachtsgeld, Prämie, Pfändung – nur für",
+    bezeichnung: "Bezeichnung",
+    zahlung_plus: "+ zum Brutto",
+    netto_plus: "+ zum Netto",
+    abzug_minus: "− Abzug",
+    zahlung_btn: "+ Zahlung",
+    abzug_btn: "+ Abzug",
+    bruttogehalt: "Bruttogehalt",
+    bav_label: "Betriebliche Altersvorsorge (bAV)",
+    steuerbrutto: "Steuerbrutto",
+    jahresbrutto_basis: "📊 Jahresbrutto-Basis:",
+    // Einstellungen
+    einstellungen: "Einstellungen",
+    tab_arbeit: "💼 Arbeit", tab_allgemein: "⚙️ Allgemein", tab_app: "📱 App",
+    stundenlohn: "Stundenlohn (€)",
+    regelarbeitszeit: "Regelarbeitszeit (Std)",
+    ueberstunden_zuschlag: "Überstundenzuschlag (%)",
+    ueberstunden_ab: "Überstunden & Spesen ab (Stunden)",
+    nachtschicht: "🌙 Nachtschicht",
+    nachtschicht_hint: "Zuschlag wird automatisch berechnet, sobald die erfassten Zeiten in das Nachtfenster fallen. Kein manueller Toggle nötig.",
+    nachtschicht_zulage: "Nachtschichtzulage (%)",
+    nachtschicht_info: "🌙 Zuschlag:",
+    nachtschicht_basis: "Basis:",
+    lohnverlauf: "📈 Lohnverlauf (Lohnerhöhungen)",
+    lohnverlauf_hint: "Trage hier alle Stundenlöhne ein, jeweils ab dem Monat in dem sie galten. Der zuletzt eingetragene Wert gilt für alle folgenden Monate.",
+    lohnverlauf_beispiel: "Beispiel: € 20.50 ab Januar 2026, € 20.85 ab April 2026 → April und folgende Monate werden automatisch mit € 20.85 berechnet.",
+    lohnverlauf_add: "+ Lohnerhöhung eintragen",
+    voreinstellungen: "Voreinstellungen Arbeitszeit",
+    voreinstellungen_hint: "Wird automatisch beim Erfassen vorausgefüllt",
+    std_beginn: "Standard Beginn", std_ende: "Standard Ende",
+    std_pause: "Standard Pause (Minuten)",
+    voreinst_nacht: "🌙 Voreinstellungen Nachtschicht",
+    voreinst_nacht_hint: "Stunden die in dieses Zeitfenster fallen werden automatisch mit der Nachtschichtzulage berechnet.",
+    voreinst_nacht_beginn: "Voreinstellung Beginn", voreinst_nacht_ende: "Voreinstellung Ende",
+    spesen_section: "Spesen",
+    spesen_betrag: "Spesenbetrag pro Tag (€)",
+    spesen_mindest: "Mindestarbeitszeit für Spesen (Stunden)",
+    spesen_info: "🍽️ Du erhältst",
+    spesen_ab_label: "Spesen pro Tag ab",
+    spesen_arbeitszeit: "Arbeitszeit.",
+    kleider_label: "👕 Kleiderreinigung pro Arbeitstag (€)",
+    kleider_info: "👕 Du erhältst",
+    kleider_info2: "Kleiderreinigung pro Arbeitstag (steuerfrei).",
+    tagestypen: "Tagestypen verwalten",
+    tagestypen_hint: "Tippe auf einen Typ um Details zu bearbeiten",
+    vergütung: "Vergütung",
+    wird_bezahlt: "Wird bezahlt",
+    bezahlte_stunden: "Bezahlte Stunden pro Tag",
+    pro_tag: "pro Tag",
+    eigene: "Eigene",
+    // Allgemein
+    urlaub_anspruch: "Urlaubsanspruch pro Jahr (Tage)",
+    urlaub_anspruch_label: "Anspruch", urlaub_genommen: "Genommen", urlaub_rest: "Rest",
+    lohnsteuer_basis: "Lohnsteuer-Grundlage",
+    lohnsteuer_basis_hint: "Trage dein erwartetes Jahresbrutto ein für eine genauere Lohnsteuer-Schätzung. Tipp: Vorjahreslohnsteuerbescheinigung oder ca. Monatsbrutto × 12.",
+    jahresbrutto: "Erwartetes Jahresbrutto",
+    jahresbrutto_ok: "✅ Lohnsteuer auf Basis",
+    jahresbrutto_warn: "⚠️ Nicht eingetragen – App schätzt mit Monatsbrutto × 12",
+    jahresbrutto_einheit: "Jahresbrutto",
+    steuerminderung: "Steuerminderung",
+    steuerminderung_hint: "Diese Beträge werden vom Steuerbrutto abgezogen und reduzieren die Lohnsteuer.",
+    bav_monat: "Betriebliche Altersvorsorge (bAV) pro Monat",
+    zusatz_bezuege: "Zusatzbezüge",
+    zusatz_bezuege_hint: "z.B. Schichtzulage, Nachtzuschlag, Prämie... Diese werden zum Brutto addiert.",
+    zum_brutto: "zum Brutto", zum_netto: "zum Netto",
+    brutto_steuerpfl: "⬆️ Wird zum Brutto addiert → ist steuerpflichtig",
+    netto_steuerfrei: "⬆️ Wird zum Netto addiert → ist steuerfrei",
+    bezug_add: "+ Bezug hinzufügen",
+    zusatz_abzuege: "Zusatzabzüge",
+    zusatz_abzuege_hint: "z.B. JobRad, Zusatzversicherung, VWL...",
+    vom_steuerbrutto: "vom Steuerbrutto", vom_netto: "vom Netto",
+    brutto_reduziert: "⬇️ Reduziert Steuerbrutto → weniger Lohnsteuer (z.B. JobRad, bAV)",
+    netto_abgezogen: "⬇️ Wird vom Nettolohn abgezogen (z.B. Pfändung, private Abzüge)",
+    abzug_add: "+ Abzug hinzufügen",
+    app_einstellungen: "App Einstellungen",
+    datensicherung: "Datensicherung",
+    datensicherung_hint: "Exportiere deine Daten als Datei auf dein Handy und importiere sie bei Bedarf wieder – so gehen bei Browser-Reset keine Einträge verloren.",
+    export_btn: "📤 Daten exportieren (Backup)",
+    import_btn: "📥 Daten importieren (Wiederherstellen)",
+    tagestypen_reset: "🔄 Tagestypen zurücksetzen",
+    tagestypen_reset_confirm: "Tagestypen auf Standard zurücksetzen?",
+    dezimal_label: "Dezimalformat",
+    dezimal_ein: "z.B. 8.50h statt 8h 30min",
+    dezimal_aus: "z.B. 8h 30min statt 8.50h",
+    steuer_soziales: "Steuer & Soziales",
+    krankenkasse: "Krankenkasse",
+    zusatzbeitrag: "Zusatzbeitrag:",
+    an_anteil: "% (AN-Anteil:",
+    effektivlohn_label: "Effektivlohn (€/Std) – von Abrechnung",
+    effektivlohn_fest: "✅ Fester Effektivlohn:",
+    effektivlohn_auto: "⚠️ Automatisch berechnet aus letzten 3 Monaten",
+    effektivlohn_placeholder: "z.B. 22.75 (von Abrechnung ablesen)",
+    steuerklasse: "Steuerklasse",
+    bundesland: "Bundesland",
+    kinderfreibetraege: "Kinderfreibeträge (Anzahl)",
+    kirchensteuer_pflichtig: "Kirchensteuerpflichtig",
+    kirchensteuer_satz_label: "auf Lohnsteuer",
+    regelarbeitszeit_summary: "Regelarbeitszeit",
+    ueberstunden_summary: "Überstunden & Spesen ab",
+    zuschlag_summary: "Zuschlag",
+    stundenlohn_summary: "Stundenlohn",
+    // App-Tab
+    akzentfarbe: "🎨 Akzentfarbe",
+    farbe_waehlen: "Farbe wählen",
+    eigene_farbe: "Eigene Farbe:",
+    vorschau: "Vorschau:",
+    vorschau_text: "Akzentfarbe",
+    vorschau_desc: "wird für Buttons, Tabs und Highlights genutzt.",
+    startansicht: "🏠 Startansicht",
+    startansicht_hint: "Welcher Tab soll beim Öffnen der App angezeigt werden?",
+    app_reset: "⚠️ Zurücksetzen",
+    app_reset_btn: "🔄 App-Design zurücksetzen",
+    app_reset_confirm: "App-Einstellungen auf Standard zurücksetzen?\n(Arbeitsdaten bleiben erhalten)",
+    alle_daten_loeschen: "🗑️ Alle Daten löschen",
+    alle_daten_confirm: "ALLE Daten löschen?\n\nEintraege UND Einstellungen werden unwiderruflich gelöscht!",
+    hintergrund: "🖼️ Hintergrund",
+    hintergrund_hint: "Wähle einen Hintergrund für die gesamte App",
+    app_info_label: "Zeiterfassung für Stundenarbeiter",
+    app_info_local: "Alle Daten bleiben lokal auf deinem Gerät.",
+    sprache: "🌐 Sprache",
+    sprache_waehlen: "Sprache wählen",
+    // Errors / alerts
+    err_datei: "Fehler beim Lesen der Datei!",
+    err_backup: "Ungültige Backup-Datei!",
+    backup_bestaetigen: "Backup vom",
+    backup_bestaetigen2: "wiederherstellen?\n\nAlle aktuellen Daten werden überschrieben!",
+    backup_ok: "✅ Daten erfolgreich wiederhergestellt!",
+    // Days / Months
+    weekdays: ["So","Mo","Di","Mi","Do","Fr","Sa"],
+    months: ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],
+    months_short: ["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"],
+    // misc
+    tage: "Tage",
+    uez: "ÜZ",
+    nachtschicht_kurz: "🌙 Nachtschicht",
+    kv_zusatz_label: "KV-Zusatzbeitrag AN",
+    // Tagestypen labels
+    dt_arbeit: "Arbeit", dt_urlaub: "Urlaub", dt_krank: "Krank", dt_kindkrank: "Kind krank",
+    dt_frei: "Frei", dt_wochenende: "Wochenende", dt_feiertag: "Feiertag", dt_homeoffice: "Homeoffice",
+    // Hintergründe
+    bg_purple_night: "🌌 Lila Nacht", bg_ocean: "🌊 Ozean", bg_forest: "🌲 Wald",
+    bg_volcano: "🌋 Vulkan", bg_sunset: "🌅 Sonnenuntergang", bg_sakura: "🌸 Sakura",
+    bg_midnight: "🌙 Mitternacht", bg_ice: "❄️ Eis", bg_desert: "🏜️ Wüste",
+    bg_navy: "🔵 Navy", bg_black: "⬛ Schwarz", bg_darkgray: "🔘 Dunkelgrau",
+  },
+  en: {
+    zeiterfassung: "Time Tracking",
+    nav_erfassen: "Record", nav_woche: "Week", nav_monat: "Month",
+    nav_jahr: "Year", nav_netto: "Net", nav_einstellungen: "Settings",
+    tagestyp: "Day Type",
+    beginn: "Start", ende: "End",
+    pause_min: "Break (Minutes)",
+    tour: "Route",
+    km: "Distance Driven (km)",
+    kraftstoff_l: "Fuel (L)",
+    kunden: "Customers",
+    abholer: "Pickups",
+    tagesnotiz: "Daily Note",
+    notiz_placeholder: "What was special today?",
+    tour_placeholder: "e.g. Route 1, City area...",
+    tagesergebnis: "Day Result",
+    arbeitszeit: "Work Time",
+    ueberstunden: "Overtime",
+    normallohn: "Regular Pay",
+    ueberstundenzuschl: "Overtime Bonus",
+    gesamt_brutto: "Total Gross",
+    spesen: "Expenses",
+    spesen_ab: "Expenses (from",
+    noch: "still",
+    nicht_erfasst: "– not recorded",
+    monatsuebersicht: "Monthly Overview",
+    wochenuebersicht: "Weekly Overview",
+    jahresuebersicht: "Annual Summary",
+    gesamtstunden: "Total Hours",
+    bruttolohn: "Gross Pay",
+    gefahrene_km: "Driven km",
+    kraftstoff: "Fuel",
+    kunden_gesamt: "Total Customers",
+    abholer_gesamt: "Total Pickups",
+    spesen_gesamt: "Total Expenses",
+    kleiderreinigung: "👕 Clothing Cleaning",
+    urlaubstage: "🏖️ Vacation Days",
+    feiertage: "🎉 Public Holidays",
+    kranktage: "🤒 Sick Days",
+    stunden_inkl: "⏱ Total Hours (incl. absences)",
+    effektivlohn: "📊 Effective wage:",
+    manuell: "(manual)",
+    durchschnitt: "(avg last 3 months)",
+    keine_eintraege_monat: "No entries this month",
+    kw: "CW",
+    arbeitstage: "Working days",
+    keine_eintraege: "No entries",
+    nachtstunden: "🌙 Night Hours",
+    nachtzulage: "🌙 Night Bonus",
+    brutto_netto: "Gross → Net",
+    lohnberechnung: "Pay Breakdown",
+    normalstunden: "Regular Hours",
+    ueberstunden_label: "Overtime",
+    urlaubslohn: "Vacation Pay",
+    feiertagsbez: "Holiday Pay",
+    kranklohn: "Sick Pay",
+    kindkrank_bez: "Child Sick Pay",
+    spesen_steuerfrei: "Expenses (tax-free)",
+    einmalig_brutto: "💸 One-time Payments (Gross)",
+    gesamtbrutto: "Total Gross",
+    sozialversicherung: "Social Security",
+    rentenversicherung: "Pension Insurance",
+    arbeitslosenversicherung: "Unemployment Insurance",
+    krankenversicherung: "Health Insurance (basic)",
+    pflegeversicherung: "Care Insurance",
+    sv_gesamt: "Total SI",
+    steuern: "Taxes",
+    lohnsteuer: "Income Tax",
+    solidaritaetszuschlag: "Solidarity Surcharge",
+    kirchensteuer: "Church Tax",
+    zusatzabzuege: "Additional Deductions",
+    gesamt_steuerfrei: "Total tax-free",
+    einmalig_netto_label: "One-time on Net",
+    einmalig_netto: "💸 One-time Payments (Net)",
+    einmalig_abzuege: "💸 One-time Deductions",
+    nettolohn: "Net Pay",
+    abzuege: "Deductions:",
+    erfasse_zuerst: "⚠️ Please record working days for the selected month first.",
+    einmalig_abzuege_titel: "💸 One-time Payments & Deductions",
+    einmalig_hint: "e.g. Christmas bonus, premium, garnishment – only for",
+    bezeichnung: "Description",
+    zahlung_plus: "+ to Gross",
+    netto_plus: "+ to Net",
+    abzug_minus: "− Deduction",
+    zahlung_btn: "+ Payment",
+    abzug_btn: "+ Deduction",
+    bruttogehalt: "Gross Salary",
+    bav_label: "Company Pension (bAV)",
+    steuerbrutto: "Tax Gross",
+    jahresbrutto_basis: "📊 Annual Gross Basis:",
+    einstellungen: "Settings",
+    tab_arbeit: "💼 Work", tab_allgemein: "⚙️ General", tab_app: "📱 App",
+    stundenlohn: "Hourly Rate (€)",
+    regelarbeitszeit: "Regular Hours (hrs)",
+    ueberstunden_zuschlag: "Overtime Bonus (%)",
+    ueberstunden_ab: "Overtime & Expenses from (hrs)",
+    nachtschicht: "🌙 Night Shift",
+    nachtschicht_hint: "The bonus is calculated automatically when recorded times fall in the night window. No manual toggle needed.",
+    nachtschicht_zulage: "Night Shift Bonus (%)",
+    nachtschicht_info: "🌙 Bonus:",
+    nachtschicht_basis: "Base:",
+    lohnverlauf: "📈 Wage History (Raises)",
+    lohnverlauf_hint: "Enter all hourly rates, starting from the month they applied. The last entered value applies to all following months.",
+    lohnverlauf_beispiel: "Example: € 20.50 from Jan 2026, € 20.85 from Apr 2026 → April and later months are automatically calculated at € 20.85.",
+    lohnverlauf_add: "+ Add Wage Increase",
+    voreinstellungen: "Work Time Defaults",
+    voreinstellungen_hint: "Auto-filled when recording",
+    std_beginn: "Default Start", std_ende: "Default End",
+    std_pause: "Default Break (Minutes)",
+    voreinst_nacht: "🌙 Night Shift Defaults",
+    voreinst_nacht_hint: "Hours falling in this window are automatically calculated with the night shift bonus.",
+    voreinst_nacht_beginn: "Default Start", voreinst_nacht_ende: "Default End",
+    spesen_section: "Expenses",
+    spesen_betrag: "Expense Amount per Day (€)",
+    spesen_mindest: "Minimum Work Hours for Expenses",
+    spesen_info: "🍽️ You receive",
+    spesen_ab_label: "expenses per day from",
+    spesen_arbeitszeit: "working hours.",
+    kleider_label: "👕 Clothing Cleaning per Working Day (€)",
+    kleider_info: "👕 You receive",
+    kleider_info2: "clothing cleaning per working day (tax-free).",
+    tagestypen: "Manage Day Types",
+    tagestypen_hint: "Tap a type to edit details",
+    vergütung: "Compensation",
+    wird_bezahlt: "Is paid",
+    bezahlte_stunden: "Paid hours per day",
+    pro_tag: "per day",
+    eigene: "Custom",
+    urlaub_anspruch: "Vacation Days per Year",
+    urlaub_anspruch_label: "Entitlement", urlaub_genommen: "Used", urlaub_rest: "Remaining",
+    lohnsteuer_basis: "Tax Base",
+    lohnsteuer_basis_hint: "Enter your expected annual gross for a more accurate income tax estimate. Tip: previous year's tax certificate or approx. monthly gross × 12.",
+    jahresbrutto: "Expected Annual Gross",
+    jahresbrutto_ok: "✅ Income tax based on",
+    jahresbrutto_warn: "⚠️ Not set – app estimates with monthly gross × 12",
+    jahresbrutto_einheit: "annual gross",
+    steuerminderung: "Tax Reduction",
+    steuerminderung_hint: "These amounts are deducted from the tax gross and reduce income tax.",
+    bav_monat: "Company Pension (bAV) per Month",
+    zusatz_bezuege: "Additional Income",
+    zusatz_bezuege_hint: "e.g. shift allowance, night bonus, premium... These are added to gross.",
+    zum_brutto: "to Gross", zum_netto: "to Net",
+    brutto_steuerpfl: "⬆️ Added to gross → taxable",
+    netto_steuerfrei: "⬆️ Added to net → tax-free",
+    bezug_add: "+ Add Income",
+    zusatz_abzuege: "Additional Deductions",
+    zusatz_abzuege_hint: "e.g. company bike, supplemental insurance, VWL...",
+    vom_steuerbrutto: "from Tax Gross", vom_netto: "from Net",
+    brutto_reduziert: "⬇️ Reduces tax gross → less income tax (e.g. company bike, bAV)",
+    netto_abgezogen: "⬇️ Deducted from net pay (e.g. garnishment, private deductions)",
+    abzug_add: "+ Add Deduction",
+    app_einstellungen: "App Settings",
+    datensicherung: "Data Backup",
+    datensicherung_hint: "Export your data as a file to your phone and import it if needed – this way no entries are lost on a browser reset.",
+    export_btn: "📤 Export Data (Backup)",
+    import_btn: "📥 Import Data (Restore)",
+    tagestypen_reset: "🔄 Reset Day Types",
+    tagestypen_reset_confirm: "Reset day types to default?",
+    dezimal_label: "Decimal Format",
+    dezimal_ein: "e.g. 8.50h instead of 8h 30min",
+    dezimal_aus: "e.g. 8h 30min instead of 8.50h",
+    steuer_soziales: "Tax & Social",
+    krankenkasse: "Health Insurer",
+    zusatzbeitrag: "Additional contribution:",
+    an_anteil: "% (employee share:",
+    effektivlohn_label: "Effective Wage (€/hr) – from payslip",
+    effektivlohn_fest: "✅ Fixed effective wage:",
+    effektivlohn_auto: "⚠️ Auto-calculated from last 3 months",
+    effektivlohn_placeholder: "e.g. 22.75 (read from payslip)",
+    steuerklasse: "Tax Class",
+    bundesland: "Federal State",
+    kinderfreibetraege: "Child Allowances (count)",
+    kirchensteuer_pflichtig: "Church Tax Liable",
+    kirchensteuer_satz_label: "on income tax",
+    regelarbeitszeit_summary: "Regular hours",
+    ueberstunden_summary: "Overtime & Expenses from",
+    zuschlag_summary: "Bonus",
+    stundenlohn_summary: "Hourly rate",
+    akzentfarbe: "🎨 Accent Color",
+    farbe_waehlen: "Choose Color",
+    eigene_farbe: "Custom Color:",
+    vorschau: "Preview:",
+    vorschau_text: "Accent Color",
+    vorschau_desc: "used for buttons, tabs and highlights.",
+    startansicht: "🏠 Start View",
+    startansicht_hint: "Which tab should open when the app launches?",
+    app_reset: "⚠️ Reset",
+    app_reset_btn: "🔄 Reset App Design",
+    app_reset_confirm: "Reset app settings to default?\n(Work data will be kept)",
+    alle_daten_loeschen: "🗑️ Delete All Data",
+    alle_daten_confirm: "DELETE ALL DATA?\n\nEntries AND settings will be permanently deleted!",
+    hintergrund: "🖼️ Background",
+    hintergrund_hint: "Choose a background for the app",
+    app_info_label: "Time tracking for hourly workers",
+    app_info_local: "All data stays locally on your device.",
+    sprache: "🌐 Language",
+    sprache_waehlen: "Choose Language",
+    err_datei: "Error reading the file!",
+    err_backup: "Invalid backup file!",
+    backup_bestaetigen: "Restore backup from",
+    backup_bestaetigen2: "?\n\nAll current data will be overwritten!",
+    backup_ok: "✅ Data restored successfully!",
+    weekdays: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+    months: ["January","February","March","April","May","June","July","August","September","October","November","December"],
+    months_short: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    tage: "Days",
+    uez: "OT",
+    nachtschicht_kurz: "🌙 Night Shift",
+    kv_zusatz_label: "Health Ins. Add. Contr. (employee)",
+    // Tagestypen labels
+    dt_arbeit: "Work", dt_urlaub: "Vacation", dt_krank: "Sick", dt_kindkrank: "Child Sick",
+    dt_frei: "Day Off", dt_wochenende: "Weekend", dt_feiertag: "Holiday", dt_homeoffice: "Home Office",
+    // Backgrounds
+    bg_purple_night: "🌌 Purple Night", bg_ocean: "🌊 Ocean", bg_forest: "🌲 Forest",
+    bg_volcano: "🌋 Volcano", bg_sunset: "🌅 Sunset", bg_sakura: "🌸 Sakura",
+    bg_midnight: "🌙 Midnight", bg_ice: "❄️ Ice", bg_desert: "🏜️ Desert",
+    bg_navy: "🔵 Navy", bg_black: "⬛ Black", bg_darkgray: "🔘 Dark Gray",
+  }
+};
+
+// Gibt den Stundenlohn zurück, der für ein bestimmtes Jahr/Monat gültig war.
+// lohnVerlauf: [{ab: "YYYY-MM", lohn: number}] – ab = erster Gültigkeitsmonat (inkl.)
+function getStundenlohnFuerMonat(config, year, month) {
+  const verlauf = (config.lohnVerlauf || []).slice().sort((a,b) => a.ab < b.ab ? -1 : 1);
+  const monatStr = `${year}-${String(month+1).padStart(2,"0")}`;
+  let lohn = config.stundenlohn;
+  for (const eintrag of verlauf) {
+    if (eintrag.ab <= monatStr) lohn = Number(eintrag.lohn);
+  }
+  return lohn;
+}
+
+function parseTime(str) {
+  if (!str) return null;
+  const [h, m] = str.split(":").map(Number);
+  return h * 60 + m;
+}
+function formatMinutes(min) {
+  const h = Math.floor(Math.abs(min) / 60);
+  const m = Math.abs(min) % 60;
+  return `${h}h ${m.toString().padStart(2,"0")}min`;
+}
+
+function formatZeit(min, dezimal) {
+  if (dezimal) {
+    const h = Math.abs(min) / 60;
+    return `${h.toFixed(2)}h`;
+  }
+  const h = Math.floor(Math.abs(min) / 60);
+  const m = Math.abs(min) % 60;
+  return `${h}h ${m.toString().padStart(2,"0")}min`;
+}
+
+function berechneNachtMinuten(workStart, workEnde, nachtStart, nachtEnde) {
+  const ws = workStart;
+  const we = workEnde <= workStart ? workEnde + 1440 : workEnde;
+  const ns = nachtStart;
+  const ne = nachtEnde <= nachtStart ? nachtEnde + 1440 : nachtEnde;
+  let overlap = 0;
+  for (const offset of [0, 1440, -1440]) {
+    const nsO = ns + offset, neO = ne + offset;
+    const s = Math.max(ws, nsO);
+    const e = Math.min(we, neO);
+    if (e > s) overlap += e - s;
+  }
+  return overlap;
+}
+
+function berechneTag(eintrag, config, stundenlohnOverride) {
+  const start = parseTime(eintrag.start), ende = parseTime(eintrag.ende);
+  const pause = Number(eintrag.pause) || 0;
+  if (start === null || ende === null) return null;
+  const gesamtMin = ende - start - pause;
+  if (gesamtMin <= 0) return null;
+  const gesamtStunden = gesamtMin / 60;
+  const ueberGrenze = config.ueberstundenMindestStunden || config.regelarbeitszeit;
+  const normalStunden = Math.min(gesamtStunden, ueberGrenze);
+  const ueberStunden  = Math.max(0, gesamtStunden - ueberGrenze);
+  const sl = stundenlohnOverride !== undefined ? stundenlohnOverride : config.stundenlohn;
+  const normalLohn = normalStunden * sl;
+  const ueberLohn  = ueberStunden  * sl * (1 + config.ueberstundenZuschlag / 100);
+  let nachtLohn = 0, nachtStunden = 0;
+  const nachtZuschlagProzent = Number(config.nachtschichtzulage) || 0;
+  if (nachtZuschlagProzent > 0) {
+    const ns = parseTime(config.defaultNachtStart || "22:00");
+    const ne = parseTime(config.defaultNachtEnde  || "06:00");
+    const rohNachtMin = berechneNachtMinuten(start, ende, ns, ne);
+    nachtStunden = Math.max(0, rohNachtMin / 60);
+    nachtLohn = nachtStunden * sl * (nachtZuschlagProzent / 100);
+  }
+  return { gesamtMin, gesamtStunden, normalStunden, ueberStunden, normalLohn, ueberLohn, nachtLohn, nachtStunden, gesamtLohn: normalLohn + ueberLohn + nachtLohn };
+}
+
+function berechneEffektivlohn(eintraege, config, bisMonat, bisJahr) {
+  // Manuellen Effektivlohn verwenden wenn eingestellt
+  if (Number(config.manuellerEffektivlohn) > 0) return Number(config.manuellerEffektivlohn);
+  // Effektivlohn = Gesamtbrutto letzte 3 Monate ÷ (Arbeitstage × Regelarbeitszeit)
+  let gesamtLohn = 0, gesamtSollStunden = 0;
+  const tagestypen = config.tagestypen || DEFAULT_TAGESTYPEN;
+  for (let i = 1; i <= 3; i++) {
+    let m = bisMonat - i;
+    let y = bisJahr;
+    if (m < 0) { m += 12; y -= 1; }
+    const daysInMonth = new Date(y, m + 1, 0).getDate();
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dateStr = `${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+      const dayOfWeek = new Date(y, m, d).getDay();
+      // Nur Montag–Freitag zählen als Sollarbeitstage
+      if (dayOfWeek === 0 || dayOfWeek === 6) continue;
+      const e = eintraege[dateStr];
+      if (!e) continue;
+      const typ = tagestypen.find(t => t.id === (e.typ || "arbeit")) || tagestypen[0];
+      // Lohn summieren (Arbeitstage + bezahlte Abwesenheiten)
+      const slM = getStundenlohnFuerMonat(config, y, m);
+      if (typ.zaehlt) {
+        const res = berechneTag(e, config, slM);
+        // Gesamtlohn (inkl. Zuschläge) / Sollstunden wie UPS
+        if (res) { gesamtLohn += res.gesamtLohn; gesamtSollStunden += config.regelarbeitszeit; }
+      } else if (typ.bezahlt) {
+        const h = typ.bezahltStunden || config.regelarbeitszeit;
+        gesamtLohn += h * slM;
+        gesamtSollStunden += config.regelarbeitszeit;
+      }
+    }
+  }
+  if (gesamtSollStunden < 1) return config.stundenlohn;
+  return gesamtLohn / gesamtSollStunden;
+}
+
+const KIRCHENSTEUER_SATZ = {
+  BY:0.08,BW:0.08,BE:0.09,BB:0.09,HB:0.09,HH:0.09,HE:0.09,
+  MV:0.09,NI:0.09,NW:0.09,RP:0.09,SL:0.09,SN:0.09,ST:0.09,SH:0.09,TH:0.09
+};
+const BUNDESLAENDER = [
+  ["BY","Bayern"],["BW","Baden-Württemberg"],["BE","Berlin"],["BB","Brandenburg"],
+  ["HB","Bremen"],["HH","Hamburg"],["HE","Hessen"],["MV","Mecklenburg-Vorpommern"],
+  ["NI","Niedersachsen"],["NW","Nordrhein-Westfalen"],["RP","Rheinland-Pfalz"],
+  ["SL","Saarland"],["SN","Sachsen"],["ST","Sachsen-Anhalt"],["SH","Schleswig-Holstein"],["TH","Thüringen"]
+];
+
+function berechneNetto(bruttoMonat, spesenMonat, config, jahresBrutto, jahresSpesen) {
+  const bavM = Number(config.bav) || 0;
+  const bruttoAbzuegeM = (config.zusatzAbzuege||[]).filter(a=>a.typ==="brutto").reduce((s,a)=>s+Number(a.betrag||0),0);
+  const steuerBrutto = Math.max(0, bruttoMonat - bavM - bruttoAbzuegeM);
+  const { steuerklasse, kirchensteuer, bundesland, kinderfreibetrage } = config;
+  const sk = Number(steuerklasse);
+  const kinder = Number(kinderfreibetrage) || 0;
+
+  // SV auf Steuerbrutto (nach bAV-Abzug) - wie UPS Abrechnung
+  const BBG_RV = 96600/12, BBG_KV = 69750/12;
+  const rvBasis = Math.min(steuerBrutto, BBG_RV);
+  const kvBasis = Math.min(steuerBrutto, BBG_KV);
+  const kvZusatzSatz = (Number(config.kvZusatz)||2.98)/100/2;
+  const rv    = Math.round(rvBasis * 0.093  * 100)/100;
+  const av    = Math.round(rvBasis * 0.013  * 100)/100;
+  const kv    = Math.round(kvBasis * 0.073  * 100)/100;
+  const zvBei = Math.round(kvBasis * kvZusatzSatz * 100)/100; // Wird separat wie UPS ausgewiesen
+  const pvSaetze = [0.0170,0.0155,0.0130,0.0105,0.0080,0.0055];
+  const pvIdx = Math.min(Math.floor(kinder),5);
+  const pvSatz = pvSaetze[pvIdx];
+  const pv = Math.round(kvBasis * pvSatz * 100)/100;
+  // UPS: SV gesamt = RV + AV + KV(Basis) + PV (ohne ZusBei!)
+  // ZusBei wird separat als "ZusBei AN lfd.Entgelt" ausgewiesen
+  const svGesamt = rv+av+kv+pv;
+  const svGesamtMitZV = svGesamt+zvBei;
+
+  // Lohnsteuer auf Gesamtbrutto × 12 (wie Bruno/UPS)
+  const jbSteuer = bruttoMonat * 12;
+  const GFB = sk === 3 ? 24696 : 12348;
+  // Vereinfacht: kein VSP/Werbungskosten-Abzug (wie Bruno)
+  let zvE = jbSteuer - GFB;
+  zvE = Math.max(0, Math.floor(zvE / 36) * 36);
+
+  // Tarifformel PAP 2026
+  let stJahr = 0;
+  if (zvE <= 0) { stJahr = 0; }
+  else if (zvE <= 17443) { const y=zvE/10000; stJahr=Math.floor((922.98*y+1400)*y); }
+  else if (zvE <= 68481) { const z=(zvE-17443)/10000; stJahr=Math.floor((181.19*z+2397)*z+1025.97); }
+  else if (zvE <= 277825) { stJahr=Math.floor(0.42*zvE-10602.13); }
+  else { stJahr=Math.floor(0.45*zvE-18936.88); }
+
+  if (sk===3) stJahr=Math.floor(stJahr/2);
+  else if (sk===5) stJahr=stJahr*2;
+
+  const lohnsteuerMonat = Math.max(0, stJahr/12);
+  const soli = stJahr > 20350 ? Math.round(lohnsteuerMonat*0.055*100)/100 : 0;
+  const ks   = Math.round(lohnsteuerMonat*(kirchensteuer?(KIRCHENSTEUER_SATZ[bundesland]||0.09):0)*100)/100;
+
+  const zusatzGesamt = (config.zusatzAbzuege||[]).filter(a=>(a.typ||"netto")==="netto").reduce((s,a)=>s+Number(a.betrag||0),0);
+  const zusatzBezuegeNetto = (config.zusatzBezuege||[]).filter(a=>(a.typ||"brutto")==="netto").reduce((s,a)=>s+Number(a.betrag||0),0);
+  const abzuege = svGesamtMitZV+lohnsteuerMonat+soli+ks+zusatzGesamt;
+  const spesenM = spesenMonat || 0;
+  const r = v => Math.round(v*100)/100;
+
+  return {
+    brutto: bruttoMonat, steuerBrutto: r(steuerBrutto),
+    rv:r(rv), av:r(av), kv:r(kv), zvBei:r(zvBei), pv:r(pv),
+    svGesamt:r(svGesamt), svGesamtMitZV:r(svGesamtMitZV),
+    lohnsteuer:r(lohnsteuerMonat), soli:r(soli), kirchensteuer:r(ks),
+    zusatzAbzuege:config.zusatzAbzuege||[], zusatzGesamt:r(zusatzGesamt),
+    zusatzBezuegeNetto:r(zusatzBezuegeNetto),
+    spesen:r(spesenM),
+    abzuege:r(abzuege), netto:r(bruttoMonat - abzuege + spesenM + zusatzBezuegeNetto)
+  };
+}
+
+const WEEKDAYS = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+const MONTHS   = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+
+const inp = {
+  width:"100%", padding:"12px 14px",
+  background:"rgba(255,255,255,0.07)", border:"1px solid rgba(167,139,250,0.25)",
+  borderRadius:12, color:"#fff", fontSize:16, outline:"none",
+};
+const navBtn = { background:"rgba(255,255,255,0.08)", border:"none", color:"#fff", borderRadius:8, padding:"6px 16px", fontSize:20, cursor:"pointer" };
+
+function Stat({ label, value, accent }) {
+  return (
+    <div>
+      <div style={{fontSize:11,color:"#6b7280",marginBottom:2,letterSpacing:1}}>{label}</div>
+      <div style={{fontSize:16,fontWeight:700,color:accent?"#f59e0b":"#e8e0f0"}}>{value}</div>
+    </div>
+  );
+}
+
+function App() {
+  const [view, setView] = useState(() => {
+    try { return JSON.parse(localStorage.getItem(CONFIG_KEY))?.appStartView || "erfassen"; } catch { return "erfassen"; }
+  });
+  const [config, setConfig] = useState(() => { try { return JSON.parse(localStorage.getItem(CONFIG_KEY))||defaultConfig; } catch { return defaultConfig; }});
+  const [eintraege, setEintraege] = useState(() => { try { return JSON.parse(localStorage.getItem(STORAGE_KEY))||{}; } catch { return {}; }});
+
+  const today = new Date();
+  const [selectedDate, setSelectedDate]   = useState(today.toISOString().slice(0,10));
+  const [selectedMonth, setSelectedMonth] = useState({year:today.getFullYear(),month:today.getMonth()});
+  const [selectedWeek, setSelectedWeek] = useState(()=>{ const d=new Date(); d.setDate(d.getDate()-((d.getDay()+6)%7)); return d.toISOString().slice(0,10); });
+  const [selectedYear, setSelectedYear] = useState(today.getFullYear());
+  const [subView, setSubView] = useState("arbeit");
+
+  const lang = config.appSprache || "de";
+  const T = TRANSLATIONS[lang] || TRANSLATIONS.de;
+  const t = key => T[key] || TRANSLATIONS.de[key] || key;
+  const WEEKDAYS = T.weekdays;
+  const MONTHS = T.months;
+  // Translate default day type labels; custom types keep their user-defined label
+  const tTypLabel = typ => {
+    const key = `dt_${typ.id}`;
+    return T[key] ? T[key] : typ.label;
+  };
+
+  const tagestypen = config.tagestypen || DEFAULT_TAGESTYPEN;
+  const eintrag = eintraege[selectedDate] || {start:config.defaultStart||"",ende:config.defaultEnde||"",pause:config.defaultPause||"30",notiz:"",kilometer:"",kraftstoff:"",kunden:"",typ:"arbeit"};
+  const aktuellerTyp = tagestypen.find(t => t.id === (eintrag.typ||"arbeit")) || tagestypen[0];
+
+  useEffect(()=>{ localStorage.setItem(STORAGE_KEY, JSON.stringify(eintraege)); },[eintraege]);
+  useEffect(()=>{ localStorage.setItem(CONFIG_KEY,  JSON.stringify(config)); },[config]);
+
+  function updateEintrag(field, value) {
+    setEintraege(prev => ({...prev, [selectedDate]:{...eintrag,[field]:value}}));
+  }
+
+  const [tagesJahr, tagesMonat] = selectedDate.split("-").map(Number);
+  const tagesSlohn = getStundenlohnFuerMonat(config, tagesJahr, tagesMonat - 1);
+  const tagesErgebnis = aktuellerTyp.zaehlt ? berechneTag(eintrag, config, tagesSlohn) : null;
+
+  const {year,month} = selectedMonth;
+  const daysInMonth = new Date(year,month+1,0).getDate();
+  let monatsGesamtMin=0,monatsNormal=0,monatsUeber=0,monatsLohn=0,monatsKm=0,monatsKraftstoff=0,monatsKunden=0,monatsAbholer=0,monatsSpesen=0,monatsKleider=0,monatsUrlaub=0,monatsFeiertage=0,monatsKranktage=0,monatsUrlaubMin=0,monatsFeiertageMin=0,monatsKranktageMin=0,monatsNachtStunden=0,monatsNachtLohn=0;
+  const monatsTage = [];
+  const effektivlohn = berechneEffektivlohn(eintraege, config, month, year);
+  // Zusatzbezüge zum Brutto addieren
+  const zusatzBezuegeBrutto = (config.zusatzBezuege||[]).filter(a=>(a.typ||"brutto")==="brutto").reduce((s,a)=>s+Number(a.betrag||0),0);
+  for (let d=1; d<=daysInMonth; d++) {
+    const dateStr=`${year}-${String(month+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+    const eTyp = eintraege[dateStr]?.typ||"arbeit";
+    const eTypObj = (config.tagestypen||DEFAULT_TAGESTYPEN).find(t=>t.id===eTyp)||DEFAULT_TAGESTYPEN[0];
+    const slTag = getStundenlohnFuerMonat(config, year, month);
+    const e=eintraege[dateStr], res=(e && eTypObj.zaehlt)?berechneTag(e,config,slTag):null;
+    if(res && eTypObj.zaehlt){monatsGesamtMin+=res.gesamtMin;monatsNormal+=res.normalStunden;monatsUeber+=res.ueberStunden;monatsLohn+=res.gesamtLohn;monatsNachtStunden+=res.nachtStunden||0;monatsNachtLohn+=res.nachtLohn||0;}
+    // Bezahlte Abwesenheit (Urlaub, Krank, Kindkrank, Feiertag) = Effektivlohn – unabhängig ob Zeiten eingetragen
+    if(e && !eTypObj.zaehlt) {
+      const typ = (config.tagestypen||DEFAULT_TAGESTYPEN).find(t=>t.id===(e.typ||"arbeit"));
+      if(typ && typ.bezahlt) {
+        const stunden = typ.bezahltStunden || config.regelarbeitszeit;
+        monatsLohn += stunden * effektivlohn;
+        if(typ.id==="urlaub") { monatsUrlaub++; monatsUrlaubMin+=stunden*60; }
+        if(typ.id==="feiertag") { monatsFeiertage++; monatsFeiertageMin+=stunden*60; }
+        if(typ.id==="krank" || typ.id==="kindkrank") { monatsKranktage++; monatsKranktageMin+=stunden*60; }
+      }
+    }
+    if(e&&e.kilometer)  monatsKm         += Number(e.kilometer)||0;
+    if(e&&e.kraftstoff) monatsKraftstoff += Number(e.kraftstoff)||0;
+    if(e&&e.kunden)     monatsKunden     += Number(e.kunden)||0;
+    if(e&&e.abholer)   monatsAbholer    += Number(e.abholer)||0;
+    if(res && res.gesamtStunden >= (config.ueberstundenMindestStunden||8)) monatsSpesen += Number(config.spesenBetrag)||0;
+    if(res) monatsKleider += Number(config.kleiderreinigungBetrag)||0;
+    monatsTage.push({d,dateStr,e,res});
+  }
+  // Einmalzahlungen dieses Monats
+  const einmaligKey = `${year}-${String(month+1).padStart(2,"0")}`;
+  const einmaligEintraege = eintraege[`__einmalig__${einmaligKey}`] || [];
+  const einmaligBrutto = einmaligEintraege.filter(e=>e.typ==="brutto"&&Number(e.betrag)>0).reduce((s,e)=>s+Number(e.betrag),0);
+  const einmaligAbzug  = einmaligEintraege.filter(e=>e.typ==="abzug" &&Number(e.betrag)>0).reduce((s,e)=>s+Number(e.betrag),0);
+  const einmaligNetto  = einmaligEintraege.filter(e=>e.typ==="netto" &&Number(e.betrag)>0).reduce((s,e)=>s+Number(e.betrag),0);
+  // Jahresbrutto für Lohnsteuerberechnung (Monatsbrutto x 12)
+  const jahresBrutto = Number(config.erwartetesJahresbrutto) > 0 ? Number(config.erwartetesJahresbrutto) : monatsLohn * 12;
+  const jahresSpesen = monatsSpesen * 12;
+  const nettoMonat = berechneNetto(monatsLohn + zusatzBezuegeBrutto + einmaligBrutto, monatsSpesen + monatsKleider, config, jahresBrutto, jahresSpesen);
+
+  return (
+    <div style={{minHeight:"100vh",background:config.appHintergrund||"linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%)",fontFamily:"'DM Mono','Courier New',monospace",color:"#e8e0f0",paddingBottom:90}}>
+
+      {/* Header */}
+      <div style={{padding:"36px 20px 16px",borderBottom:"1px solid rgba(255,255,255,0.08)",background:"rgba(255,255,255,0.03)"}}>
+        <div style={{fontSize:11,letterSpacing:4,color:"#a78bfa",textTransform:"uppercase",marginBottom:4}}>{t("zeiterfassung")}</div>
+        <div style={{fontSize:26,fontWeight:700,letterSpacing:-0.5,color:"#fff"}}>{config.appName||"WorkTracker"}</div>
+      </div>
+
+      <div style={{padding:"20px 16px",maxWidth:480,margin:"0 auto"}}>
+
+        {/* ── ERFASSEN ── */}
+        {view==="erfassen" && (
+          <div>
+            <input type="date" value={selectedDate} onChange={e=>setSelectedDate(e.target.value)}
+              style={{...inp,fontSize:16,marginBottom:20,width:"100%"}} />
+
+            <div style={{marginBottom:16,display:"flex",alignItems:"center",gap:10}}>
+              <span style={{background:"rgba(167,139,250,0.18)",color:"#a78bfa",borderRadius:8,padding:"4px 12px",fontSize:13,fontWeight:600,letterSpacing:1}}>
+                {WEEKDAYS[new Date(selectedDate+"T12:00:00").getDay()]}
+              </span>
+              <span style={{color:"#9ca3af",fontSize:13}}>{selectedDate}</span>
+            </div>
+
+            {/* Tagestyp Auswahl */}
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>{t("tagestyp")}</div>
+              <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+                {tagestypen.filter(t=>t.aktiv!==false).map(typ=>(
+                  <button key={typ.id} onClick={()=>updateEintrag("typ",typ.id)}
+                    style={{padding:"7px 12px",borderRadius:20,border:"1px solid",cursor:"pointer",fontSize:12,fontWeight:600,transition:"all 0.15s",
+                      borderColor:eintrag.typ===typ.id||(!eintrag.typ&&typ.id==="arbeit")?typ.color:"rgba(255,255,255,0.12)",
+                      background:eintrag.typ===typ.id||(!eintrag.typ&&typ.id==="arbeit")?`${typ.color}22`:"rgba(255,255,255,0.04)",
+                      color:eintrag.typ===typ.id||(!eintrag.typ&&typ.id==="arbeit")?typ.color:"#6b7280"}}>
+                    {typ.icon} {tTypLabel(typ)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Zeitfelder nur wenn Typ "zaehlt" */}
+            {aktuellerTyp.zaehlt && (<>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:12}}>
+              {[["start","beginn"],["ende","ende"]].map(([field,labelKey])=>(
+                <div key={field}>
+                  <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t(labelKey)}</div>
+                  <input type="time" value={eintrag[field]||""} onChange={e=>updateEintrag(field,e.target.value)}
+                    style={{...inp,fontSize:18,width:"100%"}} />
+                </div>
+              ))}
+            </div>
+
+            <div style={{marginBottom:12}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("pause_min")}</div>
+              <input type="number" min="0" value={eintrag.pause} onChange={e=>updateEintrag("pause",e.target.value)}
+                style={{...inp,width:"100%"}} />
+            </div>
+
+            <div style={{marginBottom:12}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("tour")}</div>
+              <input type="text" value={eintrag.tour||""} placeholder={t("tour_placeholder")}
+                onChange={e=>updateEintrag("tour",e.target.value)} style={{...inp,width:"100%"}} />
+            </div>
+
+            <div style={{marginBottom:12}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("km")}</div>
+              <input type="number" min="0" step="0.1" value={eintrag.kilometer||""} placeholder="0"
+                onChange={e=>updateEintrag("kilometer",e.target.value)} style={{...inp,width:"100%"}} />
+            </div>
+
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:12}}>
+              <div>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("kraftstoff_l")}</div>
+                <input type="number" min="0" step="0.01" value={eintrag.kraftstoff||""} placeholder="0.00"
+                  onChange={e=>updateEintrag("kraftstoff",e.target.value)} style={{...inp,width:"100%"}} />
+              </div>
+              <div>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("kunden")}</div>
+                <input type="number" min="0" value={eintrag.kunden||""} placeholder="0"
+                  onChange={e=>updateEintrag("kunden",e.target.value)} style={{...inp,width:"100%"}} />
+              </div>
+              <div>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("abholer")}</div>
+                <input type="number" min="0" value={eintrag.abholer||""} placeholder="0"
+                  onChange={e=>updateEintrag("abholer",e.target.value)} style={{...inp,width:"100%"}} />
+              </div>
+            </div>
+
+
+            </>) }
+
+            <div style={{marginBottom:20}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("tagesnotiz")}</div>
+              <textarea rows={4} value={eintrag.notiz||""} placeholder={t("notiz_placeholder")}
+                onChange={e=>updateEintrag("notiz",e.target.value)}
+                style={{...inp,width:"100%",resize:"vertical",lineHeight:1.6,fontSize:14}} />
+            </div>
+
+            {tagesErgebnis && (
+              <div style={{background:"rgba(167,139,250,0.1)",border:"1px solid rgba(167,139,250,0.3)",borderRadius:16,padding:20}}>
+                <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:14,textTransform:"uppercase"}}>{t("tagesergebnis")}</div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+                  <Stat label={t("arbeitszeit")}      value={formatZeit(tagesErgebnis.gesamtMin, config.dezimalformat)} />
+                  <Stat label={t("ueberstunden")}      value={formatZeit(Math.round(tagesErgebnis.ueberStunden*60), config.dezimalformat)} accent={tagesErgebnis.ueberStunden>0} />
+                  <Stat label={t("normallohn")}        value={`€ ${tagesErgebnis.normalLohn.toFixed(2)}`} />
+                  <Stat label={t("ueberstundenzuschl")} value={`€ ${tagesErgebnis.ueberLohn.toFixed(2)}`} accent={tagesErgebnis.ueberStunden>0} />
+                  {tagesErgebnis.nachtLohn>0 && <Stat label={`🌙 ${t("nachtzulage").replace("🌙 ","")} ${Number(config.nachtschichtzulage)||25}% (${tagesErgebnis.nachtStunden.toFixed(2)}h)`} value={`€ ${tagesErgebnis.nachtLohn.toFixed(2)}`} accent />}
+                </div>
+                <div style={{marginTop:16,paddingTop:14,borderTop:"1px solid rgba(167,139,250,0.2)",display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
+                  <span style={{fontSize:13,color:"#a78bfa"}}>{t("gesamt_brutto")}</span>
+                  <span style={{fontSize:26,fontWeight:700,color:"#c4b5fd"}}>€ {tagesErgebnis.gesamtLohn.toFixed(2)}</span>
+                </div>
+                {tagesErgebnis.gesamtStunden >= (config.ueberstundenMindestStunden||8) ? (
+                  <div style={{marginTop:10,display:"flex",justifyContent:"space-between",alignItems:"center",background:"rgba(52,211,153,0.1)",borderRadius:10,padding:"10px 14px",border:"1px solid rgba(52,211,153,0.3)"}}>
+                    <span style={{fontSize:13,color:"#34d399"}}>🍽️ {t("spesen")}</span>
+                    <span style={{fontSize:18,fontWeight:700,color:"#34d399"}}>+ € {Number(config.spesenBetrag).toFixed(2)}</span>
+                  </div>
+                ) : (
+                  <div style={{marginTop:10,display:"flex",justifyContent:"space-between",alignItems:"center",background:"rgba(255,255,255,0.03)",borderRadius:10,padding:"10px 14px",border:"1px solid rgba(255,255,255,0.06)"}}>
+                    <span style={{fontSize:12,color:"#6b7280"}}>🍽️ {t("spesen_ab")} {config.ueberstundenMindestStunden||8}h)</span>
+                    <span style={{fontSize:12,color:"#6b7280"}}>{t("noch")} {formatZeit(Math.round(((config.ueberstundenMindestStunden||8) - tagesErgebnis.gesamtStunden)*60), config.dezimalformat)}</span>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ── MONAT ── */}
+        {view==="monat" && (
+          <div>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20}}>
+              <button onClick={()=>setSelectedMonth(prev=>{const d=new Date(prev.year,prev.month-1);return{year:d.getFullYear(),month:d.getMonth()};})} style={navBtn}>‹</button>
+              <span style={{fontWeight:700,fontSize:18}}>{MONTHS[month]} {year}</span>
+              <button onClick={()=>setSelectedMonth(prev=>{const d=new Date(prev.year,prev.month+1);return{year:d.getFullYear(),month:d.getMonth()};})} style={navBtn}>›</button>
+            </div>
+
+            <div style={{background:"rgba(167,139,250,0.1)",border:"1px solid rgba(167,139,250,0.3)",borderRadius:16,padding:20,marginBottom:20}}>
+              <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:14,textTransform:"uppercase"}}>{t("monatsuebersicht")}</div>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+                <Stat label={t("gesamtstunden")} value={formatZeit(monatsGesamtMin, config.dezimalformat)} />
+                <Stat label={t("ueberstunden")}   value={formatZeit(Math.round(monatsUeber*60), config.dezimalformat)} accent={monatsUeber>0} />
+                {monatsNachtStunden>0 && <Stat label={t("nachtstunden")} value={formatZeit(Math.round(monatsNachtStunden*60), config.dezimalformat)} />}
+                {monatsNachtLohn>0 && <Stat label={t("nachtzulage")} value={`€ ${monatsNachtLohn.toFixed(2)}`} />}
+                <Stat label={t("bruttolohn")}    value={`€ ${monatsLohn.toFixed(2)}`} accent />
+                <Stat label={t("gefahrene_km")}  value={`${monatsKm.toFixed(1)} km`} />
+                <Stat label={t("kraftstoff")}    value={`${monatsKraftstoff.toFixed(2)} L`} />
+                <Stat label={t("kunden_gesamt")} value={`${monatsKunden}`} />
+                <Stat label={t("abholer_gesamt")} value={`${monatsAbholer}`} />
+                <Stat label={t("spesen_gesamt")} value={`€ ${monatsSpesen.toFixed(2)}`} accent />
+                {monatsKleider>0 && <Stat label={t("kleiderreinigung")} value={`€ ${monatsKleider.toFixed(2)}`} />}
+                <Stat label={t("urlaubstage")} value={`${monatsUrlaub} ${t("tage")}${monatsUrlaubMin>0?" / "+formatZeit(monatsUrlaubMin,config.dezimalformat):""}`} />
+                <Stat label={t("feiertage")} value={`${monatsFeiertage} ${t("tage")}${monatsFeiertageMin>0?" / "+formatZeit(monatsFeiertageMin,config.dezimalformat):""}`} />
+                <Stat label={t("kranktage")} value={`${monatsKranktage} ${t("tage")}${monatsKranktageMin>0?" / "+formatZeit(monatsKranktageMin,config.dezimalformat):""}`} />
+              </div>
+              <div style={{marginTop:14,paddingTop:14,borderTop:"1px solid rgba(167,139,250,0.25)"}}>
+                <Stat label={t("stunden_inkl")} value={formatZeit(monatsGesamtMin+monatsUrlaubMin+monatsFeiertageMin+monatsKranktageMin, config.dezimalformat)} accent />
+                <div style={{marginTop:8,fontSize:11,color:"#6b7280"}}>
+                  {t("effektivlohn")} <strong style={{color:"#a78bfa"}}>€ {effektivlohn.toFixed(2)}/h</strong>
+                  {Number(config.manuellerEffektivlohn)>0 ? ` ${t("manuell")}` : ` ${t("durchschnitt")}`}
+                </div>
+              </div>
+            </div>
+
+            <div style={{display:"flex",flexDirection:"column",gap:6}}>
+              {monatsTage.filter(t=>t.e).map(({d,dateStr,res})=>{
+                const wd=WEEKDAYS[new Date(dateStr+"T12:00:00").getDay()];
+                return (
+                  <div key={d} onClick={()=>{setSelectedDate(dateStr);setView("erfassen");}}
+                    style={{display:"flex",alignItems:"center",justifyContent:"space-between",borderRadius:12,padding:"12px 16px",cursor:"pointer",
+                      background: (()=>{const tt=tagestypen.find(t=>t.id===(eintraege[dateStr]?.typ||"arbeit"))||tagestypen[0]; return `${tt.color}11`;})(),
+                      border:`1px solid ${(()=>{const tt=tagestypen.find(t=>t.id===(eintraege[dateStr]?.typ||"arbeit"))||tagestypen[0]; return tt.color+'33';})()}`}}>
+                    <div style={{display:"flex",gap:10,alignItems:"center"}}>
+                      <span style={{color:"#a78bfa",fontWeight:700,minWidth:24}}>{wd}</span>
+                      <span style={{color:"#9ca3af",fontSize:13}}>{String(d).padStart(2,"0")}.{String(month+1).padStart(2,"0")}.</span>
+                      {res ? <span style={{fontSize:13}}>{formatZeit(res.gesamtMin, config.dezimalformat)}</span>
+                           : (()=>{const tt=tagestypen.find(t=>t.id===(eintraege[dateStr]?.typ||"arbeit"))||tagestypen[0]; return <span style={{fontSize:13}}>{tt.icon} {tt.label}{tt.bezahlt && !tt.zaehlt ? <span style={{color:"#a78bfa",marginLeft:4}}>{tt.bezahltStunden||config.regelarbeitszeit}h</span> : null}</span>; })()}
+                    </div>
+                    <div style={{textAlign:"right"}}>
+                      {res && <div style={{fontWeight:700,color:"#c4b5fd"}}>€ {res.gesamtLohn.toFixed(2)}</div>}
+                      {!res && (()=>{const tt=tagestypen.find(t=>t.id===(eintraege[dateStr]?.typ||"arbeit"))||tagestypen[0]; return tt.bezahlt && !tt.zaehlt ? <div style={{fontWeight:700,color:"#c4b5fd"}}>€ {((tt.bezahltStunden||config.regelarbeitszeit)*config.stundenlohn).toFixed(2)}</div> : null;})()}
+                      {res && res.ueberStunden>0 && <div style={{fontSize:11,color:"#f59e0b"}}>+{formatZeit(Math.round(res.ueberStunden*60), config.dezimalformat)} {t("uez")}</div>}
+                      {res && res.nachtLohn>0 && <div style={{fontSize:11,color:"#818cf8"}}>🌙 +€ {res.nachtLohn.toFixed(2)}</div>}
+                      {eintraege[dateStr]?.kilometer && <div style={{fontSize:11,color:"#60a5fa"}}>🚗 {eintraege[dateStr].kilometer} km</div>}
+                      {eintraege[dateStr]?.kunden    && <div style={{fontSize:11,color:"#34d399"}}>📦 {eintraege[dateStr].kunden} Kunden</div>}
+                      {eintraege[dateStr]?.abholer   && <div style={{fontSize:11,color:"#fb923c"}}>🚚 {eintraege[dateStr].abholer} Abholer</div>}
+                      {res && res.gesamtStunden >= (config.ueberstundenMindestStunden||8) && <div style={{fontSize:11,color:"#34d399"}}>🍽️ Spesen € {Number(config.spesenBetrag).toFixed(2)}</div>}
+                    </div>
+                  </div>
+                );
+              })}
+              {monatsTage.filter(t=>t.e).length===0 && (
+                <div style={{textAlign:"center",color:"#6b7280",padding:40}}>{t("keine_eintraege_monat")}</div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* ── WOCHE ── */}
+        {view==="woche" && (()=>{
+          const wochenStart = new Date(selectedWeek+"T12:00:00");
+          const wochenTage = Array.from({length:7},(_,i)=>{
+            const d=new Date(wochenStart); d.setDate(d.getDate()+i);
+            const dateStr=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+            const e=eintraege[dateStr];
+            const eTypObj=(config.tagestypen||DEFAULT_TAGESTYPEN).find(t=>t.id===(e?.typ||"arbeit"))||DEFAULT_TAGESTYPEN[0];
+            const slWTag = getStundenlohnFuerMonat(config, d.getFullYear(), d.getMonth());
+            const res=(e&&eTypObj.zaehlt)?berechneTag(e,config,slWTag):null;
+            return {d,dateStr,e,res,eTypObj};
+          });
+          const wocheGesamtMin=wochenTage.reduce((s,t)=>s+(t.res?.gesamtMin||0),0);
+          const wocheUeber=wochenTage.reduce((s,t)=>s+(t.res?.ueberStunden||0),0);
+          const wocheNachtStunden=wochenTage.reduce((s,t)=>s+(t.res?.nachtStunden||0),0);
+          const wocheNachtLohn=wochenTage.reduce((s,t)=>s+(t.res?.nachtLohn||0),0);
+          const wocheEffektivlohn = berechneEffektivlohn(eintraege, config, wochenStart.getMonth(), wochenStart.getFullYear());
+          let wocheLohn=wochenTage.reduce((s,t)=>s+(t.res?.gesamtLohn||0),0);
+          wochenTage.forEach(t=>{if(t.e&&!t.res&&t.eTypObj.bezahlt&&!t.eTypObj.zaehlt) wocheLohn+=(t.eTypObj.bezahltStunden||config.regelarbeitszeit)*wocheEffektivlohn;});
+          const wocheSpesen=wochenTage.reduce((s,t)=>s+(t.res&&t.res.gesamtStunden>=(config.ueberstundenMindestStunden||8)?Number(config.spesenBetrag):0),0);
+          const wocheKm=wochenTage.reduce((s,t)=>s+(Number(t.e?.kilometer)||0),0);
+          const wocheKunden=wochenTage.reduce((s,t)=>s+(Number(t.e?.kunden)||0),0);
+          const wocheAbholer=wochenTage.reduce((s,t)=>s+(Number(t.e?.abholer)||0),0);
+          const wocheUrlaubMin=wochenTage.reduce((s,t)=>s+(t.e&&!t.res&&t.eTypObj.id==="urlaub"?(t.eTypObj.bezahltStunden||config.regelarbeitszeit)*60:0),0);
+          const wocheFeiertageMin=wochenTage.reduce((s,t)=>s+(t.e&&!t.res&&t.eTypObj.id==="feiertag"?(t.eTypObj.bezahltStunden||config.regelarbeitszeit)*60:0),0);
+          const wocheKranktageMin=wochenTage.reduce((s,t)=>s+(t.e&&!t.res&&(t.eTypObj.id==="krank"||t.eTypObj.id==="kindkrank")?(t.eTypObj.bezahltStunden||config.regelarbeitszeit)*60:0),0);
+          const wocheUrlaub=wochenTage.filter(t=>t.e&&!t.res&&t.eTypObj.id==="urlaub").length;
+          const wocheFeiertage=wochenTage.filter(t=>t.e&&!t.res&&t.eTypObj.id==="feiertag").length;
+          const wocheKranktage=wochenTage.filter(t=>t.e&&!t.res&&(t.eTypObj.id==="krank"||t.eTypObj.id==="kindkrank")).length;
+
+          const prevWeek=()=>{ const d=new Date(wochenStart); d.setDate(d.getDate()-7); setSelectedWeek(d.toISOString().slice(0,10)); };
+          const nextWeek=()=>{ const d=new Date(wochenStart); d.setDate(d.getDate()+7); setSelectedWeek(d.toISOString().slice(0,10)); };
+          const wocheEnde=new Date(wochenStart); wocheEnde.setDate(wocheEnde.getDate()+6);
+
+          return (
+            <div>
+              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20}}>
+                <button onClick={prevWeek} style={navBtn}>‹</button>
+                <div style={{textAlign:"center"}}>
+                  <div style={{fontWeight:700,fontSize:16}}>{wochenStart.getDate().toString().padStart(2,"0")}.{(wochenStart.getMonth()+1).toString().padStart(2,"0")} – {wocheEnde.getDate().toString().padStart(2,"0")}.{(wocheEnde.getMonth()+1).toString().padStart(2,"0")}.{wocheEnde.getFullYear()}</div>
+                  <div style={{fontSize:11,color:"#6b7280",marginTop:2}}>{t("kw")} {(()=>{ const d=new Date(wochenStart); d.setHours(0,0,0,0); d.setDate(d.getDate()+4-(d.getDay()||7)); const y=new Date(d.getFullYear(),0,1); return Math.ceil((((d-y)/86400000)+1)/7); })()}</div>
+                </div>
+                <button onClick={nextWeek} style={navBtn}>›</button>
+              </div>
+
+              <div style={{background:"rgba(167,139,250,0.1)",border:"1px solid rgba(167,139,250,0.3)",borderRadius:16,padding:20,marginBottom:16}}>
+                <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:14,textTransform:"uppercase"}}>{t("wochenuebersicht")}</div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+                  <Stat label={t("gesamtstunden")} value={formatZeit(wocheGesamtMin,config.dezimalformat)} />
+                  <Stat label={t("ueberstunden")}   value={formatZeit(Math.round(wocheUeber*60),config.dezimalformat)} accent={wocheUeber>0} />
+                  {wocheNachtStunden>0 && <Stat label={t("nachtstunden")} value={formatZeit(Math.round(wocheNachtStunden*60),config.dezimalformat)} />}
+                  {wocheNachtLohn>0 && <Stat label={t("nachtzulage")} value={`€ ${wocheNachtLohn.toFixed(2)}`} />}
+                  <Stat label={t("bruttolohn")}    value={`€ ${wocheLohn.toFixed(2)}`} accent />
+                  <Stat label={t("spesen")}        value={`€ ${wocheSpesen.toFixed(2)}`} />
+                  <Stat label={t("gefahrene_km")}  value={`${wocheKm.toFixed(1)} km`} />
+                  <Stat label={t("kunden")}        value={`${wocheKunden}`} />
+                  <Stat label={t("abholer")}       value={`${wocheAbholer}`} />
+                  {wocheUrlaub>0 && <Stat label={t("urlaubstage")} value={`${wocheUrlaub} ${t("tage")}${wocheUrlaubMin>0?" / "+formatZeit(wocheUrlaubMin,config.dezimalformat):""}`} />}
+                  {wocheFeiertage>0 && <Stat label={t("feiertage")} value={`${wocheFeiertage} ${t("tage")}${wocheFeiertageMin>0?" / "+formatZeit(wocheFeiertageMin,config.dezimalformat):""}`} />}
+                  {wocheKranktage>0 && <Stat label={t("kranktage")} value={`${wocheKranktage} ${t("tage")}${wocheKranktageMin>0?" / "+formatZeit(wocheKranktageMin,config.dezimalformat):""}`} />}
+                </div>
+                <div style={{marginTop:14,paddingTop:14,borderTop:"1px solid rgba(167,139,250,0.25)"}}>
+                  <Stat label={t("stunden_inkl")} value={formatZeit(wocheGesamtMin+wocheUrlaubMin+wocheFeiertageMin+wocheKranktageMin,config.dezimalformat)} accent />
+                </div>
+              </div>
+
+              <div style={{display:"flex",flexDirection:"column",gap:8}}>
+                {wochenTage.map(({d,dateStr,e,res,eTypObj})=>{
+                  const wd=WEEKDAYS[d.getDay()];
+                  const isToday=dateStr===today.toISOString().slice(0,10);
+                  return (
+                    <div key={dateStr} onClick={()=>{setSelectedDate(dateStr);setView("erfassen");}}
+                      style={{borderRadius:14,padding:"14px 16px",cursor:"pointer",
+                        background:e?`${eTypObj.color}11`:"rgba(255,255,255,0.03)",
+                        border:`1px solid ${isToday?"#a78bfa":e?eTypObj.color+"33":"rgba(255,255,255,0.07)"}`,
+                        outline:isToday?"2px solid rgba(167,139,250,0.4)":"none"}}>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                        <div style={{display:"flex",gap:10,alignItems:"center"}}>
+                          <span style={{fontWeight:700,fontSize:15,color:isToday?"#a78bfa":e?eTypObj.color:"#6b7280",minWidth:28}}>{wd}</span>
+                          <span style={{color:"#9ca3af",fontSize:13}}>{d.getDate().toString().padStart(2,"0")}.{(d.getMonth()+1).toString().padStart(2,"0")}.</span>
+                          {e && !res && <span style={{fontSize:13}}>{eTypObj.icon} {eTypObj.label}</span>}
+                          {e && !res && eTypObj.bezahlt && <span style={{fontSize:13,color:"#a78bfa",marginLeft:4}}>{eTypObj.bezahltStunden||config.regelarbeitszeit}h</span>}
+                          {res && <span style={{fontSize:13,color:"#e8e0f0"}}>{formatZeit(res.gesamtMin,config.dezimalformat)}</span>}
+                          {!e && <span style={{fontSize:12,color:"#4b5563"}}>{t("nicht_erfasst")}</span>}
+                        </div>
+                        <div style={{textAlign:"right"}}>
+                          {res && <div style={{fontWeight:700,color:"#c4b5fd",fontSize:15}}>€ {res.gesamtLohn.toFixed(2)}</div>}
+                          {e && !res && eTypObj.bezahlt && <div style={{fontWeight:700,color:"#c4b5fd",fontSize:15}}>€ {((eTypObj.bezahltStunden||config.regelarbeitszeit)*config.stundenlohn).toFixed(2)}</div>}
+                          {res && res.ueberStunden>0 && <div style={{fontSize:11,color:"#f59e0b"}}>+{formatZeit(Math.round(res.ueberStunden*60),config.dezimalformat)} {t("uez")}</div>}
+                          {res && res.nachtLohn>0 && <div style={{fontSize:11,color:"#818cf8"}}>🌙 +€ {res.nachtLohn.toFixed(2)}</div>}
+                          {res && res.gesamtStunden>=(config.ueberstundenMindestStunden||8) && <div style={{fontSize:11,color:"#34d399"}}>🍽️ € {Number(config.spesenBetrag).toFixed(2)}</div>}
+                          {e?.kilometer && <div style={{fontSize:11,color:"#60a5fa"}}>🚗 {e.kilometer} km</div>}
+                        </div>
+                      </div>
+                      {e?.tour && <div style={{marginTop:6,fontSize:12,color:"#a78bfa"}}>🗺️ {e.tour}</div>}
+                      {e?.notiz && <div style={{marginTop:4,fontSize:12,color:"#6b7280",fontStyle:"italic"}}>{e.notiz}</div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* ── JAHR ── */}
+        {view==="jahr" && (()=>{
+          const MONATE=T.months_short;
+          const MONATEFULL=T.months;
+          const tagestypen = config.tagestypen||DEFAULT_TAGESTYPEN;
+
+          // Berechne alle 12 Monate
+          const monatsDaten = MONATE.map((_,m)=>{
+            const daysInMonth = new Date(selectedYear,m+1,0).getDate();
+            let gesamtMin=0,ueberMin=0,lohn=0,spesen=0,km=0,kunden=0,abholer=0;
+            let urlaub=0,feiertage=0,kranktage=0,urlaubMin=0,feiertageMin=0,kranktageMin=0,arbeitstage=0;
+            for(let d=1;d<=daysInMonth;d++){
+              const dateStr=`${selectedYear}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+              const e=eintraege[dateStr];
+              if(!e) continue;
+              const typ=tagestypen.find(t=>t.id===(e.typ||"arbeit"))||tagestypen[0];
+              const slJ = getStundenlohnFuerMonat(config, selectedYear, m);
+              const res=typ.zaehlt?berechneTag(e,config,slJ):null;
+              if(res){ gesamtMin+=res.gesamtMin; ueberMin+=Math.round(res.ueberStunden*60); lohn+=res.gesamtLohn; arbeitstage++; if(res.gesamtStunden>=(config.ueberstundenMindestStunden||8)) spesen+=Number(config.spesenBetrag); }
+              if(!res&&typ.bezahlt&&!typ.zaehlt){ const h=typ.bezahltStunden||config.regelarbeitszeit; const el=berechneEffektivlohn(eintraege,config,m,selectedYear); lohn+=h*el; if(typ.id==="urlaub"){urlaub++;urlaubMin+=h*60;} if(typ.id==="feiertag"){feiertage++;feiertageMin+=h*60;} if(typ.id==="krank"||typ.id==="kindkrank"){kranktage++;kranktageMin+=h*60;} }
+              km+=Number(e.kilometer)||0; kunden+=Number(e.kunden)||0; abholer+=Number(e.abholer)||0;
+            }
+            return {m,gesamtMin,ueberMin,lohn,spesen,km,kunden,abholer,urlaub,feiertage,kranktage,urlaubMin,feiertageMin,kranktageMin,arbeitstage};
+          });
+
+          // Jahressummen
+          const jahresGesamtMin=monatsDaten.reduce((s,m)=>s+m.gesamtMin,0);
+          const jahresUeberMin=monatsDaten.reduce((s,m)=>s+m.ueberMin,0);
+          const jahresLohn=monatsDaten.reduce((s,m)=>s+m.lohn,0);
+          const jahresSpesen=monatsDaten.reduce((s,m)=>s+m.spesen,0);
+          const jahresKm=monatsDaten.reduce((s,m)=>s+m.km,0);
+          const jahresKunden=monatsDaten.reduce((s,m)=>s+m.kunden,0);
+          const jahresAbholer=monatsDaten.reduce((s,m)=>s+m.abholer,0);
+          const jahresUrlaub=monatsDaten.reduce((s,m)=>s+m.urlaub,0);
+          const jahresFeiertage=monatsDaten.reduce((s,m)=>s+m.feiertage,0);
+          const jahresKranktage=monatsDaten.reduce((s,m)=>s+m.kranktage,0);
+          const jahresUrlaubMin=monatsDaten.reduce((s,m)=>s+m.urlaubMin,0);
+          const jahresFeiertageMin=monatsDaten.reduce((s,m)=>s+m.feiertageMin,0);
+          const jahresKranktageMin=monatsDaten.reduce((s,m)=>s+m.kranktageMin,0);
+          const jahresArbeitstage=monatsDaten.reduce((s,m)=>s+m.arbeitstage,0);
+          const jahresGesamtInklMin=jahresGesamtMin+jahresUrlaubMin+jahresFeiertageMin+jahresKranktageMin;
+
+          return (
+            <div>
+              {/* Jahr Navigation */}
+              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20}}>
+                <button onClick={()=>setSelectedYear(y=>y-1)} style={navBtn}>‹</button>
+                <div style={{fontWeight:700,fontSize:22}}>{selectedYear}</div>
+                <button onClick={()=>setSelectedYear(y=>y+1)} style={navBtn}>›</button>
+              </div>
+
+              {/* Jahreszusammenfassung */}
+              <div style={{background:"rgba(167,139,250,0.1)",border:"1px solid rgba(167,139,250,0.3)",borderRadius:16,padding:20,marginBottom:16}}>
+                <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:14,textTransform:"uppercase"}}>{t("jahresuebersicht")} {selectedYear}</div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+                  <Stat label={t("arbeitszeit")}  value={formatZeit(jahresGesamtMin,config.dezimalformat)} />
+                  <Stat label={t("ueberstunden")}     value={formatZeit(jahresUeberMin,config.dezimalformat)} accent={jahresUeberMin>0} />
+                  <Stat label={t("bruttolohn")}      value={`€ ${jahresLohn.toFixed(2)}`} accent />
+                  <Stat label={t("spesen")}          value={`€ ${jahresSpesen.toFixed(2)}`} />
+                  <Stat label={t("arbeitstage")}     value={`${jahresArbeitstage} ${t("tage")}`} />
+                  <Stat label={t("gefahrene_km")}    value={`${jahresKm.toFixed(1)} km`} />
+                  <Stat label={t("kunden")}          value={`${jahresKunden}`} />
+                  <Stat label={t("abholer")}         value={`${jahresAbholer}`} />
+                  {jahresUrlaub>0 && <Stat label={t("urlaubstage")} value={`${jahresUrlaub} ${t("tage")} / ${formatZeit(jahresUrlaubMin,config.dezimalformat)}`} />}
+                  {jahresFeiertage>0 && <Stat label={t("feiertage")} value={`${jahresFeiertage} ${t("tage")} / ${formatZeit(jahresFeiertageMin,config.dezimalformat)}`} />}
+                  {jahresKranktage>0 && <Stat label={t("kranktage")} value={`${jahresKranktage} ${t("tage")} / ${formatZeit(jahresKranktageMin,config.dezimalformat)}`} />}
+                </div>
+                <div style={{marginTop:14,paddingTop:14,borderTop:"1px solid rgba(167,139,250,0.25)"}}>
+                  <Stat label={t("stunden_inkl")} value={formatZeit(jahresGesamtInklMin,config.dezimalformat)} accent />
+                </div>
+              </div>
+
+              {/* Monatsübersicht */}
+              <div style={{display:"flex",flexDirection:"column",gap:8}}>
+                {monatsDaten.map(({m,gesamtMin,ueberMin,lohn,spesen,km,urlaubMin,feiertageMin,kranktageMin,arbeitstage})=>{
+                  const monatGesamtInkl=gesamtMin+urlaubMin+feiertageMin+kranktageMin;
+                  const hatDaten=monatGesamtInkl>0||lohn>0;
+                  const istAktuellerMonat=m===today.getMonth()&&selectedYear===today.getFullYear();
+                  return (
+                    <div key={m} onClick={()=>{setSelectedMonth({year:selectedYear,month:m});setView("monat");}}
+                      style={{borderRadius:14,padding:"14px 16px",cursor:"pointer",
+                        background:hatDaten?"rgba(167,139,250,0.07)":"rgba(255,255,255,0.02)",
+                        border:`1px solid ${istAktuellerMonat?"#a78bfa":hatDaten?"rgba(167,139,250,0.3)":"rgba(255,255,255,0.06)"}`,
+                        outline:istAktuellerMonat?"2px solid rgba(167,139,250,0.3)":"none"}}>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                        <div>
+                          <div style={{fontWeight:700,fontSize:15,color:istAktuellerMonat?"#a78bfa":hatDaten?"#e8e0f0":"#4b5563"}}>{MONATEFULL[m]}</div>
+                          {hatDaten && <div style={{fontSize:12,color:"#6b7280",marginTop:2}}>{arbeitstage} {t("arbeitstage")} · {formatZeit(monatGesamtInkl,config.dezimalformat)}</div>}
+                          {!hatDaten && <div style={{fontSize:12,color:"#374151"}}>{t("keine_eintraege")}</div>}
+                        </div>
+                        <div style={{textAlign:"right"}}>
+                          {lohn>0 && <div style={{fontWeight:700,color:"#c4b5fd",fontSize:16}}>€ {lohn.toFixed(2)}</div>}
+                          {ueberMin>0 && <div style={{fontSize:11,color:"#f59e0b"}}>+{formatZeit(ueberMin,config.dezimalformat)} {t("uez")}</div>}
+                          {spesen>0 && <div style={{fontSize:11,color:"#34d399"}}>🍽️ € {spesen.toFixed(2)}</div>}
+                          {km>0 && <div style={{fontSize:11,color:"#60a5fa"}}>🚗 {km.toFixed(1)} km</div>}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* ── NETTO ── */}
+        {view==="netto" && (()=>{
+          const prevMonthNetto=()=>setSelectedMonth(prev=>{const m=prev.month-1<0?11:prev.month-1;const y=prev.month-1<0?prev.year-1:prev.year;return{year:y,month:m};});
+          const nextMonthNetto=()=>setSelectedMonth(prev=>{const m=prev.month+1>11?0:prev.month+1;const y=prev.month+1>11?prev.year+1:prev.year;return{year:y,month:m};});
+          // Detaillierte Stundenaufschlüsselung für den Monat
+          const nettoEffektivlohn = berechneEffektivlohn(eintraege, config, month, year);
+          const bruttoAbzuegeTotal = (config.zusatzAbzuege||[]).filter(a=>a.typ==="brutto").reduce((s,a)=>s+Number(a.betrag||0),0);
+          let nt_normalMin=0, nt_ueberMin=0, nt_urlaubMin=0, nt_feierMin=0, nt_krankMin=0, nt_kindkrankMin=0, nt_spesen=0, nt_nachtLohn=0, nt_nachtStunden=0;
+          const tagestypenN = config.tagestypen||DEFAULT_TAGESTYPEN;
+          const daysInMonthN = new Date(year,month+1,0).getDate();
+          for(let d=1;d<=daysInMonthN;d++){
+            const dateStr=`${year}-${String(month+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+            const e=eintraege[dateStr]; if(!e) continue;
+            const typ=tagestypenN.find(t=>t.id===(e.typ||"arbeit"))||tagestypenN[0];
+            const slN = getStundenlohnFuerMonat(config, year, month);
+            if(typ.zaehlt){
+              const res=berechneTag(e,config,slN);
+              if(res){ nt_normalMin+=res.normalStunden*60; nt_ueberMin+=res.ueberStunden*60; nt_nachtLohn+=res.nachtLohn||0; nt_nachtStunden+=(res.nachtStunden||0); if(res.gesamtStunden>=(config.ueberstundenMindestStunden||8)) nt_spesen+=Number(config.spesenBetrag)||0; }
+            } else if(typ.bezahlt){
+              const h=(typ.bezahltStunden||config.regelarbeitszeit)*60;
+              if(typ.id==="urlaub") nt_urlaubMin+=h;
+              else if(typ.id==="feiertag") nt_feierMin+=h;
+              else if(typ.id==="kindkrank") nt_kindkrankMin+=h;
+              else if(typ.id==="krank") nt_krankMin+=h;
+            }
+          }
+          const slNetto = getStundenlohnFuerMonat(config, year, month);
+          const nt_normalLohn = (nt_normalMin/60)*slNetto;
+          const nt_ueberLohn  = (nt_ueberMin/60)*slNetto;
+          const nt_ueberZuschlag = (nt_ueberMin/60)*slNetto*(config.ueberstundenZuschlag/100);
+          const nt_urlaubLohn = (nt_urlaubMin/60)*nettoEffektivlohn;
+          const nt_feierLohn  = (nt_feierMin/60)*nettoEffektivlohn;
+          const nt_krankLohn  = (nt_krankMin/60)*nettoEffektivlohn;
+          const nt_kindkrankLohn = (nt_kindkrankMin/60)*nettoEffektivlohn;
+
+          const AufschlRow = ({label, stunden, satz, betrag, color="#9ca3af"}) => stunden > 0 ? (
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
+              <div>
+                <span style={{color}}>{label}</span>
+                <span style={{color:"#4b5563",fontSize:11,marginLeft:8}}>{stunden.toFixed(2)}h × € {satz.toFixed(2)}</span>
+              </div>
+              <span style={{color:"#e8e0f0",fontWeight:600}}>€ {betrag.toFixed(2)}</span>
+            </div>
+          ) : null;
+
+          return (
+          <div>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:16}}>
+              <button onClick={prevMonthNetto} style={navBtn}>‹</button>
+              <div style={{textAlign:"center"}}>
+                <div style={{fontWeight:700,fontSize:18}}>Brutto → Netto</div>
+                <div style={{fontSize:13,color:"#a78bfa"}}>{T.months[month]} {year}</div>
+              </div>
+              <button onClick={nextMonthNetto} style={navBtn}>›</button>
+            </div>
+
+            {/* Stundenaufschlüsselung */}
+            <div style={{background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:16,padding:20,marginBottom:12}}>
+              <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:14,textTransform:"uppercase"}}>{t("lohnberechnung")}</div>
+              <AufschlRow label={t("normalstunden")}        stunden={nt_normalMin/60}    satz={slNetto}                              betrag={nt_normalLohn} />
+              <AufschlRow label={t("ueberstunden_label")}          stunden={nt_ueberMin/60}     satz={slNetto}                              betrag={nt_ueberLohn} color="#f59e0b"/>
+              <AufschlRow label={`${t("ueberstunden_label")} ${t("zuschlag_summary")} ${config.ueberstundenZuschlag}%`} stunden={nt_ueberMin/60} satz={slNetto*(config.ueberstundenZuschlag/100)} betrag={nt_ueberZuschlag} color="#f59e0b"/>
+              {nt_nachtLohn>0 && <AufschlRow label={`🌙 ${t("nachtschicht_kurz").replace("🌙 ","")} ${Number(config.nachtschichtzulage)||25}%`} stunden={nt_nachtStunden} satz={slNetto*((Number(config.nachtschichtzulage)||25)/100)} betrag={nt_nachtLohn} color="#818cf8"/>}
+              <AufschlRow label={t("urlaubslohn")}          stunden={nt_urlaubMin/60}    satz={nettoEffektivlohn}                               betrag={nt_urlaubLohn} color="#34d399"/>
+              <AufschlRow label={t("feiertagsbez")}   stunden={nt_feierMin/60}     satz={nettoEffektivlohn}                               betrag={nt_feierLohn} color="#60a5fa"/>
+              <AufschlRow label={t("kranklohn")}            stunden={nt_krankMin/60}     satz={nettoEffektivlohn}                               betrag={nt_krankLohn} color="#f87171"/>
+              <AufschlRow label={t("kindkrank_bez")}   stunden={nt_kindkrankMin/60} satz={nettoEffektivlohn}                               betrag={nt_kindkrankLohn} color="#f87171"/>
+              {(config.zusatzBezuege||[]).filter(a=>(a.typ||"brutto")==="brutto"&&Number(a.betrag)>0).map((b,i)=>(
+                <div key={i} style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
+                  <span style={{color:"#34d399"}}>{b.name||"Zusatzbezug"}</span>
+                  <span style={{color:"#e8e0f0",fontWeight:600}}>€ {Number(b.betrag).toFixed(2)}</span>
+                </div>
+              ))}
+              {nt_spesen>0 && (
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
+                  <span style={{color:"#a78bfa"}}>{t("spesen_steuerfrei")}</span>
+                  <span style={{color:"#e8e0f0",fontWeight:600}}>€ {nt_spesen.toFixed(2)}</span>
+                </div>
+              )}
+              {einmaligBrutto>0 && (
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
+                  <span style={{color:"#f59e0b"}}>{t("einmalig_brutto")}</span>
+                  <span style={{color:"#e8e0f0",fontWeight:600}}>+ € {einmaligBrutto.toFixed(2)}</span>
+                </div>
+              )}
+              <div style={{display:"flex",justifyContent:"space-between",paddingTop:10,borderTop:"1px solid rgba(255,255,255,0.08)",fontWeight:700,fontSize:14}}>
+                <span style={{color:"#a78bfa"}}>{t("gesamtbrutto")}</span>
+                <span style={{color:"#fff"}}>€ {(monatsLohn+zusatzBezuegeBrutto+einmaligBrutto).toFixed(2)}</span>
+              </div>
+              {nettoEffektivlohn !== config.stundenlohn && (
+                <div style={{marginTop:8,fontSize:11,color:"#6b7280"}}>{t("effektivlohn")} <strong style={{color:"#a78bfa"}}>€ {nettoEffektivlohn.toFixed(2)}/h</strong> {t("durchschnitt")}</div>
+              )}
+            </div>
+
+            {/* Einmalzahlungen Verwaltung */}
+            {(()=>{
+              const einmaligKeyN = `${year}-${String(month+1).padStart(2,"0")}`;
+              const storageKey = `__einmalig__${einmaligKeyN}`;
+              const liste = eintraege[storageKey] || [];
+              const setListe = fn => setEintraege(prev=>({...prev,[storageKey]:fn(prev[storageKey]||[])}));
+              return (
+              <div style={{background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:16,padding:20,marginBottom:12}}>
+                <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:12,textTransform:"uppercase"}}>{t("einmalig_abzuege_titel")}</div>
+                <div style={{fontSize:12,color:"#6b7280",marginBottom:12}}>{t("einmalig_hint")} {T.months[month]} {year}</div>
+                {liste.map((item,i)=>(
+                  <div key={i} style={{display:"flex",gap:8,marginBottom:8,alignItems:"center"}}>
+                    <input type="text" value={item.name||""} placeholder={t("bezeichnung")}
+                      onChange={e=>setListe(l=>{const n=[...l];n[i]={...n[i],name:e.target.value};return n;})}
+                      style={{...inp,flex:2,fontSize:13,padding:"9px 12px"}} />
+                    <input type="number" min="0" step="0.01" value={item.betrag||""} placeholder="€"
+                      onChange={e=>setListe(l=>{const n=[...l];n[i]={...n[i],betrag:e.target.value};return n;})}
+                      style={{...inp,flex:1,fontSize:13,padding:"9px 12px"}} />
+                    <button onClick={()=>setListe(l=>{const n=[...l];n.splice(i,1);return n;})}
+                      style={{background:"rgba(248,113,113,0.15)",border:"1px solid rgba(248,113,113,0.3)",borderRadius:8,color:"#f87171",cursor:"pointer",padding:"9px 11px",fontSize:15,flexShrink:0}}>✕</button>
+                  </div>
+                ))}
+                {liste.map((item,i)=>(
+                  <div key={`typ-${i}`} style={{display:"flex",gap:6,marginBottom:10}}>
+                    {[["brutto",t("zahlung_plus"),"#f59e0b"],["netto",t("netto_plus"),"#34d399"],["abzug",t("abzug_minus"),"#f87171"]].map(([typ,label,col])=>(
+                      <button key={typ} onClick={()=>setListe(l=>{const n=[...l];n[i]={...n[i],typ};return n;})}
+                        style={{flex:1,padding:"5px 0",borderRadius:8,border:"1px solid",cursor:"pointer",fontSize:11,fontWeight:600,fontFamily:"inherit",
+                          borderColor:(item.typ||"brutto")===typ?col:"rgba(255,255,255,0.1)",
+                          background:(item.typ||"brutto")===typ?`${col}22`:"rgba(255,255,255,0.03)",
+                          color:(item.typ||"brutto")===typ?col:"#6b7280"}}>
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                ))}
+                <div style={{display:"flex",gap:8}}>
+                  <button onClick={()=>setListe(l=>[...l,{name:"",betrag:"",typ:"brutto"}])}
+                    style={{flex:1,padding:"10px",borderRadius:10,border:"1px dashed rgba(245,158,11,0.4)",background:"rgba(245,158,11,0.05)",color:"#f59e0b",cursor:"pointer",fontSize:13,fontFamily:"inherit"}}>
+                    {t("zahlung_btn")}
+                  </button>
+                  <button onClick={()=>setListe(l=>[...l,{name:"",betrag:"",typ:"abzug"}])}
+                    style={{flex:1,padding:"10px",borderRadius:10,border:"1px dashed rgba(248,113,113,0.4)",background:"rgba(248,113,113,0.05)",color:"#f87171",cursor:"pointer",fontSize:13,fontFamily:"inherit"}}>
+                    {t("abzug_btn")}
+                  </button>
+                </div>
+              </div>
+              );
+            })()}
+
+            <div style={{background:"rgba(167,139,250,0.1)",border:"1px solid rgba(167,139,250,0.3)",borderRadius:16,padding:20,marginBottom:16}}>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:6}}>
+                <span style={{fontSize:11,letterSpacing:3,color:"#a78bfa",textTransform:"uppercase"}}>{t("bruttogehalt")}</span>
+                <span style={{fontSize:22,fontWeight:700,color:"#fff"}}>€ {monatsLohn.toFixed(2)}</span>
+              </div>
+              {Number(config.bav)>0 && <div style={{display:"flex",justifyContent:"space-between",fontSize:12,color:"#6b7280",marginBottom:4}}>
+                <span>{t("bav_label")}</span>
+                <span>- € {Number(config.bav).toFixed(2)}</span>
+              </div>}
+              {(Number(config.bav)>0||bruttoAbzuegeTotal>0) && <div style={{display:"flex",justifyContent:"space-between",fontSize:12,color:"#9ca3af",marginBottom:4}}>
+                <span>{t("steuerbrutto")}</span>
+                <span style={{fontWeight:600}}>€ {nettoMonat.steuerBrutto.toFixed(2)}</span>
+              </div>}
+              <div style={{fontSize:11,color:"#6b7280"}}>
+                SK {config.steuerklasse} · {BUNDESLAENDER.find(b=>b[0]===config.bundesland)?.[1]||config.bundesland}
+                {config.kirchensteuer?" · Kirchensteuer":""}
+                {Number(config.kinderfreibetrage)>0?` · ${config.kinderfreibetrage} Kinderfreibetrag`:""}
+                {Number(config.erwartetesJahresbrutto)>0 && <div style={{marginTop:4,fontSize:11,color:"#34d399"}}>📊 Jahresbrutto-Basis: € {Number(config.erwartetesJahresbrutto).toLocaleString('de-DE')}</div>}
+              </div>
+            </div>
+
+            <div style={{background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:16,padding:20,marginBottom:12}}>
+              <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:12,textTransform:"uppercase"}}>{t("sozialversicherung")}</div>
+              {[[t("rentenversicherung"),nettoMonat.rv],[t("arbeitslosenversicherung"),nettoMonat.av],[t("krankenversicherung"),nettoMonat.kv],[t("pflegeversicherung"),nettoMonat.pv]].map(([label,val])=>(
+                <div key={label} style={{display:"flex",justifyContent:"space-between",marginBottom:8,fontSize:13}}>
+                  <span style={{color:"#9ca3af"}}>{label}</span>
+                  <span style={{color:"#f87171"}}>- € {val.toFixed(2)}</span>
+                </div>
+              ))}
+              <div style={{display:"flex",justifyContent:"space-between",marginBottom:8,fontSize:13}}>
+                <span style={{color:"#9ca3af"}}>{t("kv_zusatz_label")} ({((Number(config.kvZusatz)||2.98)/2).toFixed(2)}%)</span>
+                <span style={{color:"#f87171"}}>- € {nettoMonat.zvBei.toFixed(2)}</span>
+              </div>
+              <div style={{display:"flex",justifyContent:"space-between",paddingTop:10,borderTop:"1px solid rgba(255,255,255,0.08)",fontWeight:700}}>
+                <span style={{color:"#9ca3af"}}>{t("sv_gesamt")}</span>
+                <span style={{color:"#f87171"}}>- € {nettoMonat.svGesamtMitZV.toFixed(2)}</span>
+              </div>
+            </div>
+
+            <div style={{background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:16,padding:20,marginBottom:16}}>
+              <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:12,textTransform:"uppercase"}}>{t("steuern")}</div>
+              {[[t("lohnsteuer"),nettoMonat.lohnsteuer],[t("solidaritaetszuschlag"),nettoMonat.soli],...(config.kirchensteuer?[[t("kirchensteuer"),nettoMonat.kirchensteuer]]:[])].map(([label,val])=>(
+                <div key={label} style={{display:"flex",justifyContent:"space-between",marginBottom:8,fontSize:13}}>
+                  <span style={{color:"#9ca3af"}}>{label}</span>
+                  <span style={{color:"#f87171"}}>- € {val.toFixed(2)}</span>
+                </div>
+              ))}
+            </div>
+
+            {nettoMonat.zusatzAbzuege && nettoMonat.zusatzAbzuege.length > 0 && (
+              <div style={{background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:16,padding:20,marginBottom:16}}>
+                <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:12,textTransform:"uppercase"}}>{t("zusatzabzuege")}</div>
+                {nettoMonat.zusatzAbzuege.map((a,i)=>(
+                  <div key={i} style={{display:"flex",justifyContent:"space-between",marginBottom:8,fontSize:13}}>
+                    <span style={{color:"#9ca3af"}}>{a.name||"Abzug"}</span>
+                    <span style={{color:"#f87171"}}>- € {Number(a.betrag||0).toFixed(2)}</span>
+                  </div>
+                ))}
+                <div style={{display:"flex",justifyContent:"space-between",paddingTop:10,borderTop:"1px solid rgba(255,255,255,0.08)",fontWeight:700}}>
+                  <span style={{color:"#9ca3af"}}>{t("sv_gesamt")}</span>
+                  <span style={{color:"#f87171"}}>- € {nettoMonat.zusatzGesamt.toFixed(2)}</span>
+                </div>
+              </div>
+            )}
+            {/* Zusätzliche steuerfreie Bezüge */}
+            {(monatsSpesen > 0 || monatsKleider > 0) && (
+              <div style={{background:"rgba(52,211,153,0.08)",border:"1px solid rgba(52,211,153,0.25)",borderRadius:16,padding:20,marginBottom:12}}>
+                <div style={{fontSize:11,letterSpacing:3,color:"#34d399",marginBottom:12,textTransform:"uppercase"}}>✅ {t("gesamt_steuerfrei")}</div>
+                {monatsSpesen > 0 && (
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
+                    <span style={{color:"#9ca3af"}}>🍽️ Spesen ({Math.round(monatsSpesen/Number(config.spesenBetrag))} Tage × € {Number(config.spesenBetrag).toFixed(2)})</span>
+                    <span style={{color:"#34d399",fontWeight:600}}>+ € {monatsSpesen.toFixed(2)}</span>
+                  </div>
+                )}
+                {monatsKleider > 0 && (
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
+                    <span style={{color:"#9ca3af"}}>👕 Kleiderreinigung (× € {Number(config.kleiderreinigungBetrag||0).toFixed(2)}/Tag)</span>
+                    <span style={{color:"#60a5fa",fontWeight:600}}>+ € {monatsKleider.toFixed(2)}</span>
+                  </div>
+                )}
+                <div style={{display:"flex",justifyContent:"space-between",paddingTop:8,borderTop:"1px solid rgba(52,211,153,0.2)",fontWeight:700,fontSize:13}}>
+                  <span style={{color:"#34d399"}}>{t("gesamt_steuerfrei")}</span>
+                  <span style={{color:"#34d399"}}>+ € {(monatsSpesen + monatsKleider).toFixed(2)}</span>
+                </div>
+              </div>
+            )}
+
+            {(einmaligNetto>0||einmaligAbzug>0) && (
+              <div style={{background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:16,padding:16,marginBottom:12}}>
+                <div style={{fontSize:11,letterSpacing:3,color:"#a78bfa",marginBottom:10,textTransform:"uppercase"}}>{t("einmalig_netto_label")}</div>
+                {einmaligNetto>0 && (
+                  <div style={{display:"flex",justifyContent:"space-between",fontSize:13,marginBottom:6}}>
+                    <span style={{color:"#34d399"}}>{t("einmalig_netto")}</span>
+                    <span style={{color:"#34d399",fontWeight:600}}>+ € {einmaligNetto.toFixed(2)}</span>
+                  </div>
+                )}
+                {einmaligAbzug>0 && (
+                  <div style={{display:"flex",justifyContent:"space-between",fontSize:13}}>
+                    <span style={{color:"#f87171"}}>{t("einmalig_abzuege")}</span>
+                    <span style={{color:"#f87171",fontWeight:600}}>- € {einmaligAbzug.toFixed(2)}</span>
+                  </div>
+                )}
+              </div>
+            )}
+            <div style={{background:"linear-gradient(135deg,rgba(52,211,153,0.15),rgba(167,139,250,0.15))",border:"1px solid rgba(52,211,153,0.4)",borderRadius:16,padding:24,textAlign:"center"}}>
+              <div style={{fontSize:11,letterSpacing:3,color:"#34d399",marginBottom:8,textTransform:"uppercase"}}>{t("nettolohn")}</div>
+              <div style={{fontSize:38,fontWeight:700,color:"#34d399"}}>€ {(nettoMonat.netto+einmaligNetto-einmaligAbzug).toFixed(2)}</div>
+              <div style={{fontSize:12,color:"#9ca3af",marginTop:8}}>
+                {t("abzuege")} € {nettoMonat.abzuege.toFixed(2)} ({monatsLohn>0?((nettoMonat.abzuege/monatsLohn)*100).toFixed(1):0}%)
+              </div>
+            </div>
+
+            {monatsLohn===0 && (
+              <div style={{textAlign:"center",color:"#6b7280",padding:20,fontSize:13,marginTop:16}}>
+                {t("erfasse_zuerst")}
+              </div>
+            )}
+          </div>
+          );
+        })()}
+
+        {/* ── EINSTELLUNGEN ── */}
+        {view==="einstellungen" && (
+          <div>
+            <div style={{fontSize:18,fontWeight:700,marginBottom:16}}>{t("einstellungen")}</div>
+
+            {/* Sub-Tabs */}
+            <div style={{display:"flex",gap:8,marginBottom:24}}>
+              {[["arbeit","tab_arbeit"],["allgemein","tab_allgemein"],["app","tab_app"]].map(([id,labelKey])=>(
+                <button key={id} onClick={()=>setSubView(id)}
+                  style={{flex:1,padding:"10px 0",borderRadius:12,border:"1px solid",cursor:"pointer",fontFamily:"inherit",fontWeight:600,fontSize:13,
+                    borderColor:subView===id?(config.appAccentColor||"#a78bfa"):"rgba(255,255,255,0.1)",
+                    background:subView===id?`${config.appAccentColor||"#a78bfa"}33`:"rgba(255,255,255,0.04)",
+                    color:subView===id?"#fff":"#9ca3af"}}>
+                  {t(labelKey)}
+                </button>
+              ))}
+            </div>
+
+            {/* ── ARBEITSEINSTELLUNGEN ── */}
+            {subView==="arbeit" && (<div>
+            {[{key:"stundenlohn",labelKey:"stundenlohn",min:1,step:"0.5"},{key:"regelarbeitszeit",labelKey:"regelarbeitszeit",min:1,step:"0.1"},{key:"ueberstundenZuschlag",labelKey:"ueberstunden_zuschlag",min:0,step:"1"},{key:"ueberstundenMindestStunden",labelKey:"ueberstunden_ab",min:0,step:"0.1"}].map(({key,labelKey,min,step})=>(
+              <div key={key} style={{marginBottom:16}}>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t(labelKey)}</div>
+                <input type="number" min={min} step={step} value={config[key]}
+                  onChange={e=>setConfig(prev=>({...prev,[key]:Number(e.target.value)}))}
+                  style={{...inp,fontSize:18,width:"100%"}} />
+              </div>
+            ))}
+
+
+
+            {/* Nachtschicht */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginTop:28,marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("nachtschicht")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:14}}>{t("nachtschicht_hint")}</div>
+            <div style={{marginBottom:12}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("nachtschicht_zulage")}</div>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                <input type="number" min="0" step="1" value={config.nachtschichtzulage??25}
+                  onChange={e=>setConfig(prev=>({...prev,nachtschichtzulage:Number(e.target.value)}))}
+                  style={{...inp,width:"100%",fontSize:18}} />
+                <span style={{color:"#6b7280",flexShrink:0}}>%</span>
+              </div>
+              <div style={{marginTop:8,padding:12,background:"rgba(99,102,241,0.08)",borderRadius:10,border:"1px solid rgba(99,102,241,0.2)",fontSize:13,color:"#9ca3af"}}>
+                {t("nachtschicht_info")} <strong style={{color:"#818cf8"}}>{Number(config.nachtschichtzulage)||25}%</strong> → € {(getStundenlohnFuerMonat(config,year,month)*((Number(config.nachtschichtzulage)||25)/100)).toFixed(2)}/h extra
+                <span style={{fontSize:11,color:"#6b7280",marginLeft:6}}>({t("nachtschicht_basis")} € {getStundenlohnFuerMonat(config,year,month).toFixed(2)}/h · {MONTHS[month]} {year})</span>
+              </div>
+            </div>
+
+
+            {/* Lohnverlauf / Lohnerhöhungen */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginTop:28,marginBottom:10,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("lohnverlauf")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:14}}>
+              {t("lohnverlauf_hint")}
+            </div>
+            {(config.lohnVerlauf||[]).slice().sort((a,b)=>a.ab<b.ab?-1:1).map((eintrag,i)=>(
+              <div key={i} style={{display:"flex",gap:8,marginBottom:8,alignItems:"center"}}>
+                <input type="month" value={eintrag.ab}
+                  onChange={e=>{const v=[...(config.lohnVerlauf||[])];v[i]={...v[i],ab:e.target.value};setConfig(prev=>({...prev,lohnVerlauf:v}));}}
+                  style={{...inp,flex:2,fontSize:14,filter:"invert(0)"}} />
+                <div style={{display:"flex",alignItems:"center",gap:4,flex:1}}>
+                  <span style={{color:"#6b7280",flexShrink:0}}>€</span>
+                  <input type="number" min="1" step="0.01" value={eintrag.lohn}
+                    onChange={e=>{const v=[...(config.lohnVerlauf||[])];v[i]={...v[i],lohn:e.target.value};setConfig(prev=>({...prev,lohnVerlauf:v}));}}
+                    style={{...inp,fontSize:14,width:"100%"}} />
+                </div>
+                <button onClick={()=>{const v=[...(config.lohnVerlauf||[])];v.splice(i,1);setConfig(prev=>({...prev,lohnVerlauf:v}));}}
+                  style={{background:"rgba(248,113,113,0.15)",border:"1px solid rgba(248,113,113,0.3)",borderRadius:8,color:"#f87171",cursor:"pointer",padding:"10px 12px",fontSize:16,flexShrink:0}}>✕</button>
+              </div>
+            ))}
+            <button onClick={()=>{
+              const heute=new Date();
+              const ab=`${heute.getFullYear()}-${String(heute.getMonth()+1).padStart(2,"0")}`;
+              setConfig(prev=>({...prev,lohnVerlauf:[...(prev.lohnVerlauf||[]),{ab,lohn:prev.stundenlohn}]}));
+            }}
+              style={{width:"100%",padding:"12px",borderRadius:12,border:"1px dashed rgba(167,139,250,0.4)",background:"rgba(167,139,250,0.05)",color:"#a78bfa",cursor:"pointer",fontSize:14,fontFamily:"inherit",marginBottom:8}}>
+              {t("lohnverlauf_add")}
+            </button>
+            <div style={{fontSize:11,color:"#4b5563",marginBottom:20}}>
+              {t("lohnverlauf_beispiel")}
+            </div>
+
+            {/* Voreinstellungen Arbeitszeit */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginTop:28,marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("voreinstellungen")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:12}}>{t("voreinstellungen_hint")}</div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:12}}>
+              <div>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("std_beginn")}</div>
+                <input type="time" value={config.defaultStart||"07:00"}
+                  onChange={e=>setConfig(prev=>({...prev,defaultStart:e.target.value}))}
+                  style={{...inp,width:"100%",fontSize:16}} />
+              </div>
+              <div>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("std_ende")}</div>
+                <input type="time" value={config.defaultEnde||"15:36"}
+                  onChange={e=>setConfig(prev=>({...prev,defaultEnde:e.target.value}))}
+                  style={{...inp,width:"100%",fontSize:16}} />
+              </div>
+            </div>
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("std_pause")}</div>
+              <input type="number" min="0" step="5" value={config.defaultPause||"30"}
+                onChange={e=>setConfig(prev=>({...prev,defaultPause:e.target.value}))}
+                style={{...inp,fontSize:18,width:"100%"}} />
+            </div>
+
+            {/* Voreinstellungen Nachtschicht */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginTop:28,marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("voreinst_nacht")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:12}}>{t("voreinst_nacht_hint")}</div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:20}}>
+              <div>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("voreinst_nacht_beginn")}</div>
+                <input type="time" value={config.defaultNachtStart||"22:00"}
+                  onChange={e=>setConfig(prev=>({...prev,defaultNachtStart:e.target.value}))}
+                  style={{...inp,fontSize:16,width:"100%"}} />
+              </div>
+              <div>
+                <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("voreinst_nacht_ende")}</div>
+                <input type="time" value={config.defaultNachtEnde||"06:00"}
+                  onChange={e=>setConfig(prev=>({...prev,defaultNachtEnde:e.target.value}))}
+                  style={{...inp,fontSize:16,width:"100%"}} />
+              </div>
+            </div>
+
+            {/* Spesen */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginTop:28,marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("spesen_section")}
+            </div>
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("spesen_betrag")}</div>
+              <input type="number" min="0" step="0.50" value={config.spesenBetrag}
+                onChange={e=>setConfig(prev=>({...prev,spesenBetrag:e.target.value}))}
+                style={{...inp,fontSize:18,width:"100%"}} />
+            </div>
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("spesen_mindest")}</div>
+              <input type="number" min="0" step="0.5" value={config.spesenMindestStunden}
+                onChange={e=>setConfig(prev=>({...prev,spesenMindestStunden:Number(e.target.value)}))}
+                style={{...inp,fontSize:18,width:"100%"}} />
+            </div>
+            <div style={{padding:12,background:"rgba(52,211,153,0.08)",borderRadius:10,border:"1px solid rgba(52,211,153,0.2)",fontSize:13,color:"#9ca3af"}}>
+              {t("spesen_info")} <strong style={{color:"#34d399"}}>€ {Number(config.spesenBetrag).toFixed(2)}</strong> {t("spesen_ab_label")} <strong style={{color:"#34d399"}}>{config.spesenMindestStunden}h</strong> {t("spesen_arbeitszeit")}
+            </div>
+
+            <div style={{marginBottom:12,marginTop:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("kleider_label")}</div>
+              <input type="number" min="0" step="0.01" value={config.kleiderreinigungBetrag||0}
+                onChange={e=>setConfig(prev=>({...prev,kleiderreinigungBetrag:Number(e.target.value)}))}
+                style={{...inp,fontSize:18,width:"100%"}} />
+              <div style={{padding:12,background:"rgba(96,165,250,0.08)",borderRadius:10,border:"1px solid rgba(96,165,250,0.2)",fontSize:13,color:"#9ca3af",marginTop:8}}>
+                {t("kleider_info")} <strong style={{color:"#60a5fa"}}>€ {Number(config.kleiderreinigungBetrag||0).toFixed(2)}</strong> {t("kleider_info2")}
+              </div>
+            </div>
+
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginTop:28,marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("tagestypen")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:12}}>{t("tagestypen_hint")}</div>
+            {(config.tagestypen||DEFAULT_TAGESTYPEN).map((typ,i)=>(
+              <div key={typ.id} style={{background:"rgba(255,255,255,0.04)",borderRadius:14,marginBottom:10,border:`1px solid ${typ.aktiv===false?"rgba(255,255,255,0.06)":typ.color+"44"}`,overflow:"hidden"}}>
+                {/* Header Zeile */}
+                <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"12px 16px"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:10}}>
+                    <span style={{fontSize:20}}>{typ.icon}</span>
+                    <div>
+                      <div style={{fontWeight:600,fontSize:14,color:typ.aktiv===false?"#6b7280":typ.color}}>{tTypLabel(typ)}</div>
+                      <div style={{fontSize:11,color:"#6b7280"}}>
+                        {typ.zaehlt?`⏱ ${t("arbeitszeit")}`:typ.bezahlt?`💶 ${t("wird_bezahlt")} (${typ.bezahltStunden||config.regelarbeitszeit}h)`:`– ${t("nicht_erfasst")}`}
+                      </div>
+                    </div>
+                  </div>
+                  {/* Aktiv-Toggle */}
+                  <div onClick={()=>setConfig(prev=>{
+                    const tt=[...(prev.tagestypen||DEFAULT_TAGESTYPEN)];
+                    tt[i]={...tt[i],aktiv:tt[i].aktiv===false?true:false};
+                    return {...prev,tagestypen:tt};
+                  })} style={{width:40,height:22,borderRadius:11,cursor:"pointer",background:typ.aktiv===false?"rgba(255,255,255,0.1)":typ.color,position:"relative",transition:"background 0.2s",flexShrink:0}}>
+                    <div style={{position:"absolute",top:2,left:typ.aktiv===false?2:20,width:18,height:18,borderRadius:"50%",background:"#fff",transition:"left 0.2s"}} />
+                  </div>
+                </div>
+
+                {/* Bezahlung Einstellungen – nur wenn kein Arbeitstag */}
+                {!typ.zaehlt && (
+                  <div style={{borderTop:`1px solid ${typ.color}22`,padding:"12px 16px",background:"rgba(0,0,0,0.15)"}}>
+                    <div style={{fontSize:11,color:"#a78bfa",letterSpacing:1,marginBottom:10,textTransform:"uppercase"}}>{t("vergütung")}</div>
+
+                    {/* Bezahlt Toggle */}
+                    <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:typ.bezahlt?12:0}}>
+                      <span style={{fontSize:13,color:"#9ca3af"}}>{t("wird_bezahlt")}</span>
+                      <div onClick={()=>setConfig(prev=>{
+                        const tt=[...(prev.tagestypen||DEFAULT_TAGESTYPEN)];
+                        tt[i]={...tt[i],bezahlt:!tt[i].bezahlt};
+                        return {...prev,tagestypen:tt};
+                      })} style={{width:40,height:22,borderRadius:11,cursor:"pointer",background:typ.bezahlt?"#34d399":"rgba(255,255,255,0.1)",position:"relative",transition:"background 0.2s",flexShrink:0}}>
+                        <div style={{position:"absolute",top:2,left:typ.bezahlt?20:2,width:18,height:18,borderRadius:"50%",background:"#fff",transition:"left 0.2s"}} />
+                      </div>
+                    </div>
+
+                    {/* Bezahlte Stunden */}
+                    {typ.bezahlt && (
+                      <div>
+                        <div style={{fontSize:12,color:"#6b7280",marginBottom:6}}>{t("bezahlte_stunden")}</div>
+                        <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+                          {[config.regelarbeitszeit, 4, 6, 8].filter((v,idx,arr)=>arr.indexOf(v)===idx).sort((a,b)=>a-b).map(h=>(
+                            <button key={h} onClick={()=>setConfig(prev=>{
+                              const tt=[...(prev.tagestypen||DEFAULT_TAGESTYPEN)];
+                              tt[i]={...tt[i],bezahltStunden:h};
+                              return {...prev,tagestypen:tt};
+                            })} style={{padding:"6px 14px",borderRadius:20,border:"1px solid",cursor:"pointer",fontSize:13,fontWeight:600,
+                              borderColor:(typ.bezahltStunden||config.regelarbeitszeit)===h?typ.color:"rgba(255,255,255,0.15)",
+                              background:(typ.bezahltStunden||config.regelarbeitszeit)===h?`${typ.color}22`:"rgba(255,255,255,0.04)",
+                              color:(typ.bezahltStunden||config.regelarbeitszeit)===h?typ.color:"#6b7280"}}>
+                              {h}h
+                            </button>
+                          ))}
+                          {/* Eigene Stunden */}
+                          <input type="number" min="0" step="0.5" placeholder={t("eigene")}
+                            value={![config.regelarbeitszeit,4,6,8].includes(typ.bezahltStunden||config.regelarbeitszeit)?(typ.bezahltStunden||""):""}
+                            onChange={e=>setConfig(prev=>{
+                              const tt=[...(prev.tagestypen||DEFAULT_TAGESTYPEN)];
+                              tt[i]={...tt[i],bezahltStunden:Number(e.target.value)};
+                              return {...prev,tagestypen:tt};
+                            })}
+                            style={{...inp,width:80,padding:"6px 10px",fontSize:13,textAlign:"center"}} />
+                        </div>
+                        <div style={{marginTop:10,fontSize:12,color:"#6b7280"}}>
+                          = <strong style={{color:typ.color}}>€ {((typ.bezahltStunden||config.regelarbeitszeit)*config.stundenlohn).toFixed(2)}</strong> {t("pro_tag")}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            </div>)}
+
+            {/* ── ALLGEMEINE EINSTELLUNGEN ── */}
+            {subView==="allgemein" && (<div>
+
+            {/* Urlaubsanspruch */}
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("urlaub_anspruch")}</div>
+              <input type="number" min="0" step="1" value={config.urlaubstageProJahr||28}
+                onChange={e=>setConfig(prev=>({...prev,urlaubstageProJahr:Number(e.target.value)}))}
+                style={{...inp,fontSize:18,width:"100%"}} />
+            </div>
+
+            {/* Urlaubsübersicht */}
+            {(()=>{
+              const thisYear = new Date().getFullYear();
+              let used = 0;
+              Object.entries(eintraege).forEach(([date,e])=>{
+                if(date.startsWith(String(thisYear)) && e.typ==="urlaub") used++;
+              });
+              const remaining = (config.urlaubstageProJahr||28) - used;
+              return (
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:24}}>
+                  <div style={{background:"rgba(56,189,248,0.1)",border:"1px solid rgba(56,189,248,0.3)",borderRadius:12,padding:12,textAlign:"center"}}>
+                    <div style={{fontSize:11,color:"#38bdf8",marginBottom:4}}>{t("urlaub_anspruch_label")}</div>
+                    <div style={{fontSize:20,fontWeight:700,color:"#38bdf8"}}>{config.urlaubstageProJahr||28}</div>
+                  </div>
+                  <div style={{background:"rgba(167,139,250,0.1)",border:"1px solid rgba(167,139,250,0.3)",borderRadius:12,padding:12,textAlign:"center"}}>
+                    <div style={{fontSize:11,color:"#a78bfa",marginBottom:4}}>{t("urlaub_genommen")}</div>
+                    <div style={{fontSize:20,fontWeight:700,color:"#a78bfa"}}>{used}</div>
+                  </div>
+                  <div style={{background:remaining>0?"rgba(52,211,153,0.1)":"rgba(248,113,113,0.1)",border:`1px solid ${remaining>0?"rgba(52,211,153,0.3)":"rgba(248,113,113,0.3)"}`,borderRadius:12,padding:12,textAlign:"center"}}>
+                    <div style={{fontSize:11,color:remaining>0?"#34d399":"#f87171",marginBottom:4}}>{t("urlaub_rest")}</div>
+                    <div style={{fontSize:20,fontWeight:700,color:remaining>0?"#34d399":"#f87171"}}>{remaining}</div>
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Erwartetes Jahresbrutto */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("lohnsteuer_basis")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:14}}>{t("lohnsteuer_basis_hint")}</div>
+            <div style={{marginBottom:20}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("jahresbrutto")}</div>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                <span style={{color:"#6b7280"}}>€</span>
+                <input type="number" min="0" step="100" value={config.erwartetesJahresbrutto||""}
+                  onChange={e=>setConfig(prev=>({...prev,erwartetesJahresbrutto:Number(e.target.value)}))}
+                  style={{...inp,width:"100%"}} placeholder="z.B. 45000"/>
+              </div>
+              {Number(config.erwartetesJahresbrutto)>0 ? (
+                <div style={{marginTop:8,fontSize:12,color:"#34d399"}}>{t("jahresbrutto_ok")} € {Number(config.erwartetesJahresbrutto).toLocaleString('de-DE')} {t("jahresbrutto_einheit")}</div>
+              ) : (
+                <div style={{marginTop:8,fontSize:12,color:"#f59e0b"}}>{t("jahresbrutto_warn")}</div>
+              )}
+            </div>
+
+            {/* Betriebliche Altersvorsorge & VL */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("steuerminderung")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:14}}>{t("steuerminderung_hint")}</div>
+            <div style={{marginBottom:12}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("bav_monat")}</div>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                <span style={{color:"#6b7280"}}>€</span>
+                <input type="number" min="0" step="0.01" value={config.bav||0}
+                  onChange={e=>setConfig(prev=>({...prev,bav:Number(e.target.value)}))}
+                  style={{...inp,width:"100%"}} />
+              </div>
+            </div>
+            <div style={{marginBottom:20}}>
+            </div>
+
+            {/* Zusatzbezüge */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("zusatz_bezuege")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:12}}>{t("zusatz_bezuege_hint")}</div>
+            {(config.zusatzBezuege||[]).map((bezug,i)=>(
+              <div key={i} style={{background:"rgba(52,211,153,0.05)",borderRadius:12,padding:"12px",marginBottom:10,border:"1px solid rgba(52,211,153,0.15)"}}>
+                <div style={{display:"flex",gap:8,marginBottom:8,alignItems:"center"}}>
+                  <input type="text" value={bezug.name} placeholder={t("bezeichnung")}
+                    onChange={e=>{const a=[...(config.zusatzBezuege||[])];a[i]={...a[i],name:e.target.value};setConfig(prev=>({...prev,zusatzBezuege:a}));}}
+                    style={{...inp,flex:2,fontSize:14}} />
+                  <input type="number" min="0" step="0.01" value={bezug.betrag} placeholder="€"
+                    onChange={e=>{const a=[...(config.zusatzBezuege||[])];a[i]={...a[i],betrag:e.target.value};setConfig(prev=>({...prev,zusatzBezuege:a}));}}
+                    style={{...inp,flex:1,fontSize:14}} />
+                  <button onClick={()=>{const a=[...(config.zusatzBezuege||[])];a.splice(i,1);setConfig(prev=>({...prev,zusatzBezuege:a}));}}
+                    style={{background:"rgba(248,113,113,0.15)",border:"1px solid rgba(248,113,113,0.3)",borderRadius:8,color:"#f87171",cursor:"pointer",padding:"10px 12px",fontSize:16,flexShrink:0}}>✕</button>
+                </div>
+                <div style={{display:"flex",gap:8}}>
+                  {["brutto","netto"].map(typ=>(
+                    <button key={typ} onClick={()=>{const a=[...(config.zusatzBezuege||[])];a[i]={...a[i],typ};setConfig(prev=>({...prev,zusatzBezuege:a}));}}
+                      style={{flex:1,padding:"6px",borderRadius:8,border:"1px solid",cursor:"pointer",fontSize:12,fontFamily:"inherit",fontWeight:600,
+                        borderColor:(bezug.typ||"brutto")===typ?"#34d399":"rgba(255,255,255,0.1)",
+                        background:(bezug.typ||"brutto")===typ?"rgba(52,211,153,0.15)":"rgba(255,255,255,0.03)",
+                        color:(bezug.typ||"brutto")===typ?"#34d399":"#6b7280"}}>
+                      {typ==="brutto"?t("zum_brutto"):t("zum_netto")}
+                    </button>
+                  ))}
+                </div>
+                <div style={{fontSize:11,color:"#4b5563",marginTop:6}}>
+                  {(bezug.typ||"brutto")==="brutto"
+                    ? t("brutto_steuerpfl")
+                    : t("netto_steuerfrei")}
+                </div>
+              </div>
+            ))}
+            <button onClick={()=>setConfig(prev=>({...prev,zusatzBezuege:[...(prev.zusatzBezuege||[]),{name:"",betrag:"",typ:"brutto"}]}))}
+              style={{width:"100%",padding:"12px",borderRadius:12,border:"1px dashed rgba(52,211,153,0.4)",background:"rgba(52,211,153,0.05)",color:"#34d399",cursor:"pointer",fontSize:14,fontFamily:"inherit",marginBottom:20}}>
+              {t("bezug_add")}
+            </button>
+
+            {/* Zusatzabzüge */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+              {t("zusatz_abzuege")}
+            </div>
+            <div style={{fontSize:12,color:"#6b7280",marginBottom:12}}>{t("zusatz_abzuege_hint")}</div>
+            {(config.zusatzAbzuege||[]).map((abzug,i)=>(
+              <div key={i} style={{background:"rgba(255,255,255,0.03)",borderRadius:12,padding:"12px",marginBottom:10,border:"1px solid rgba(255,255,255,0.07)"}}>
+                <div style={{display:"flex",gap:8,marginBottom:8,alignItems:"center"}}>
+                  <input type="text" value={abzug.name} placeholder={t("bezeichnung")}
+                    onChange={e=>{const a=[...(config.zusatzAbzuege||[])];a[i]={...a[i],name:e.target.value};setConfig(prev=>({...prev,zusatzAbzuege:a}));}}
+                    style={{...inp,flex:2,fontSize:14}} />
+                  <input type="number" min="0" step="0.01" value={abzug.betrag} placeholder="€"
+                    onChange={e=>{const a=[...(config.zusatzAbzuege||[])];a[i]={...a[i],betrag:e.target.value};setConfig(prev=>({...prev,zusatzAbzuege:a}));}}
+                    style={{...inp,flex:1,fontSize:14}} />
+                  <button onClick={()=>{const a=[...(config.zusatzAbzuege||[])];a.splice(i,1);setConfig(prev=>({...prev,zusatzAbzuege:a}));}}
+                    style={{background:"rgba(248,113,113,0.15)",border:"1px solid rgba(248,113,113,0.3)",borderRadius:8,color:"#f87171",cursor:"pointer",padding:"10px 12px",fontSize:16,flexShrink:0}}>✕</button>
+                </div>
+                {/* Brutto oder Netto Toggle */}
+                <div style={{display:"flex",gap:8}}>
+                  {["brutto","netto"].map(typ=>(
+                    <button key={typ} onClick={()=>{const a=[...(config.zusatzAbzuege||[])];a[i]={...a[i],typ};setConfig(prev=>({...prev,zusatzAbzuege:a}));}}
+                      style={{flex:1,padding:"6px",borderRadius:8,border:"1px solid",cursor:"pointer",fontSize:12,fontFamily:"inherit",fontWeight:600,
+                        borderColor:(abzug.typ||"netto")===typ?"#a78bfa":"rgba(255,255,255,0.1)",
+                        background:(abzug.typ||"netto")===typ?"rgba(167,139,250,0.15)":"rgba(255,255,255,0.03)",
+                        color:(abzug.typ||"netto")===typ?"#a78bfa":"#6b7280"}}>
+                      {typ==="brutto"?t("vom_steuerbrutto"):t("vom_netto")}
+                    </button>
+                  ))}
+                </div>
+                <div style={{fontSize:11,color:"#4b5563",marginTop:6}}>
+                  {(abzug.typ||"netto")==="brutto"
+                    ? t("brutto_reduziert")
+                    : t("netto_abgezogen")}
+                </div>
+              </div>
+            ))}
+            <button onClick={()=>setConfig(prev=>({...prev,zusatzAbzuege:[...(prev.zusatzAbzuege||[]),{name:"",betrag:"",typ:"netto"}]}))}
+              style={{width:"100%",padding:"12px",borderRadius:12,border:"1px dashed rgba(167,139,250,0.4)",background:"rgba(167,139,250,0.05)",color:"#a78bfa",cursor:"pointer",fontSize:14,fontFamily:"inherit",marginBottom:20}}>
+              {t("abzug_add")}
+            </button>
+
+            {/* App Einstellungen */}
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14}}>
+              {t("app_einstellungen")}
+            </div>
+
+            {/* Export / Import */}
+            <div style={{marginBottom:16,background:"rgba(255,255,255,0.04)",borderRadius:12,padding:"16px",border:"1px solid rgba(255,255,255,0.08)"}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>{t("datensicherung")}</div>
+              <div style={{fontSize:12,color:"#6b7280",marginBottom:12,lineHeight:1.6}}>
+                {t("datensicherung_hint")}
+              </div>
+              <button onClick={()=>{
+                const data = { eintraege, config, exportDatum: new Date().toISOString() };
+                const blob = new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                const datum = new Date().toISOString().slice(0,10);
+                a.href=url; a.download=`WorkTracker_Backup_${datum}.json`; a.click();
+                URL.revokeObjectURL(url);
+              }} style={{width:"100%",padding:"13px",borderRadius:12,border:"1px solid rgba(52,211,153,0.4)",background:"rgba(52,211,153,0.08)",color:"#34d399",cursor:"pointer",fontSize:14,fontFamily:"inherit",marginBottom:10,fontWeight:600}}>
+                {t("export_btn")}
+              </button>
+              <label style={{display:"block",width:"100%",padding:"13px",borderRadius:12,border:"1px solid rgba(96,165,250,0.4)",background:"rgba(96,165,250,0.08)",color:"#60a5fa",cursor:"pointer",fontSize:14,fontFamily:"inherit",fontWeight:600,textAlign:"center",boxSizing:"border-box"}}>
+                {t("import_btn")}
+                <input type="file" accept=".json" style={{display:"none"}} onChange={e=>{
+                  const file=e.target.files[0]; if(!file) return;
+                  const reader=new FileReader();
+                  reader.onload=ev=>{
+                    try {
+                      const data=JSON.parse(ev.target.result);
+                      if(!data.eintraege) { alert(t("err_backup")); return; }
+                      if(window.confirm(`${t("backup_bestaetigen")} ${data.exportDatum?new Date(data.exportDatum).toLocaleDateString("de-DE"):"?"} ${t("backup_bestaetigen2")}`)) {
+                        setEintraege(data.eintraege);
+                        if(data.config) setConfig(data.config);
+                        alert(t("backup_ok"));
+                      }
+                    } catch { alert(t("err_datei")); }
+                  };
+                  reader.readAsText(file);
+                  e.target.value="";
+                }} />
+              </label>
+            </div>
+
+            {/* Tagestypen zurücksetzen */}
+            <button onClick={()=>{ if(window.confirm(t("tagestypen_reset_confirm"))) setConfig(prev=>({...prev,tagestypen:DEFAULT_TAGESTYPEN})); }}
+              style={{width:"100%",padding:"12px",borderRadius:12,border:"1px dashed rgba(248,113,113,0.4)",background:"rgba(248,113,113,0.05)",color:"#f87171",cursor:"pointer",fontSize:14,fontFamily:"inherit",marginBottom:16}}>
+              {t("tagestypen_reset")}
+            </button>
+            {/* Zeitformat Toggle */}
+            <div style={{marginBottom:16,display:"flex",alignItems:"center",justifyContent:"space-between",background:"rgba(255,255,255,0.04)",borderRadius:12,padding:"14px 16px",border:"1px solid rgba(255,255,255,0.08)"}}>
+              <div>
+                <div style={{fontWeight:600,fontSize:14}}>{t("dezimal_label")}</div>
+                <div style={{fontSize:11,color:"#6b7280",marginTop:2}}>
+                  {config.dezimalformat ? t("dezimal_ein") : t("dezimal_aus")}
+                </div>
+              </div>
+              <div onClick={()=>setConfig(prev=>({...prev,dezimalformat:!prev.dezimalformat}))}
+                style={{width:48,height:26,borderRadius:13,cursor:"pointer",background:config.dezimalformat?"#a78bfa":"rgba(255,255,255,0.15)",position:"relative",transition:"background 0.2s",flexShrink:0}}>
+                <div style={{position:"absolute",top:3,left:config.dezimalformat?25:3,width:20,height:20,borderRadius:"50%",background:"#fff",transition:"left 0.2s"}} />
+              </div>
+            </div>
+
+            <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14}}>
+              {t("steuer_soziales")}
+            </div>
+
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>{t("krankenkasse")}</div>
+              <select value={config.krankenkasse||"AOK Hessen"}
+                onChange={e=>{
+                  const kk=KRANKENKASSEN.find(k=>k[0]===e.target.value);
+                  setConfig(prev=>({...prev,krankenkasse:e.target.value,kvZusatz:kk&&kk[1]!==null?kk[1]:prev.kvZusatz}));
+                }}
+                style={{...inp,width:"100%",marginBottom:8}}>
+                {KRANKENKASSEN.map(([name])=>(<option key={name} value={name}>{name}</option>))}
+              </select>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                <div style={{fontSize:12,color:"#6b7280",whiteSpace:"nowrap"}}>{t("zusatzbeitrag")}</div>
+                <input type="number" min="0" step="0.01" value={config.kvZusatz||2.9}
+                  onChange={e=>setConfig(prev=>({...prev,kvZusatz:Number(e.target.value),krankenkasse:"Sonstige / Eigener Wert"}))}
+                  style={{...inp,width:80,textAlign:"center"}} />
+                <div style={{fontSize:12,color:"#6b7280"}}>{t("an_anteil")} {((Number(config.kvZusatz)||2.9)/2).toFixed(2)}%)</div>
+              </div>
+            </div>
+
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("effektivlohn_label")}</div>
+              <input type="number" min="0" step="0.01" value={config.manuellerEffektivlohn||""}
+                placeholder={t("effektivlohn_placeholder")}
+                onChange={e=>setConfig(prev=>({...prev,manuellerEffektivlohn:Number(e.target.value)}))}
+                style={{...inp,width:"100%",marginBottom:6}} />
+              <div style={{fontSize:12,color:"#6b7280"}}>
+                {Number(config.manuellerEffektivlohn)>0
+                  ? <span style={{color:"#34d399"}}>{t("effektivlohn_fest")} € {Number(config.manuellerEffektivlohn).toFixed(2)}/h (Urlaub, Feiertag, Krank)</span>
+                  : <span style={{color:"#f59e0b"}}>{t("effektivlohn_auto")}</span>}
+              </div>
+            </div>
+
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>{t("steuerklasse")}</div>
+              <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8}}>
+                {[1,2,3,4,5,6].map(sk=>(
+                  <button key={sk} onClick={()=>setConfig(prev=>({...prev,steuerklasse:sk}))}
+                    style={{padding:"10px 0",borderRadius:10,border:"1px solid",
+                      borderColor:config.steuerklasse===sk?"#a78bfa":"rgba(255,255,255,0.1)",
+                      background:config.steuerklasse===sk?"rgba(167,139,250,0.2)":"rgba(255,255,255,0.04)",
+                      color:config.steuerklasse===sk?"#c4b5fd":"#9ca3af",
+                      cursor:"pointer",fontWeight:700,fontSize:15}}>
+                    SK {sk}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("bundesland")}</div>
+              <select value={config.bundesland} onChange={e=>setConfig(prev=>({...prev,bundesland:e.target.value}))}
+                style={{...inp,width:"100%",fontSize:15}}>
+                {BUNDESLAENDER.map(([code,name])=>(<option key={code} value={code}>{name}</option>))}
+              </select>
+            </div>
+
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:11,color:"#a78bfa",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>{t("kinderfreibetraege")}</div>
+              <input type="number" min="0" max="10" step="0.5" value={config.kinderfreibetrage}
+                onChange={e=>setConfig(prev=>({...prev,kinderfreibetrage:e.target.value}))}
+                style={{...inp,fontSize:18,width:"100%"}} />
+            </div>
+
+            <div style={{marginBottom:24,display:"flex",alignItems:"center",justifyContent:"space-between",background:"rgba(255,255,255,0.04)",borderRadius:12,padding:"14px 16px",border:"1px solid rgba(255,255,255,0.08)"}}>
+              <div>
+                <div style={{fontWeight:600,fontSize:14}}>{t("kirchensteuer_pflichtig")}</div>
+                <div style={{fontSize:11,color:"#6b7280",marginTop:2}}>
+                  {(config.bundesland==="BY"||config.bundesland==="BW")?"8%":"9%"} {t("kirchensteuer_satz_label")}
+                </div>
+              </div>
+              <div onClick={()=>setConfig(prev=>({...prev,kirchensteuer:!prev.kirchensteuer}))}
+                style={{width:48,height:26,borderRadius:13,cursor:"pointer",background:config.kirchensteuer?"#a78bfa":"rgba(255,255,255,0.15)",position:"relative",transition:"background 0.2s",flexShrink:0}}>
+                <div style={{position:"absolute",top:3,left:config.kirchensteuer?25:3,width:20,height:20,borderRadius:"50%",background:"#fff",transition:"left 0.2s"}} />
+              </div>
+            </div>
+
+            <div style={{padding:16,background:"rgba(167,139,250,0.08)",borderRadius:12,border:"1px solid rgba(167,139,250,0.2)",fontSize:13,color:"#9ca3af",lineHeight:1.6}}>
+              {t("regelarbeitszeit_summary")} <strong style={{color:"#c4b5fd"}}>{config.regelarbeitszeit}h</strong> · {t("ueberstunden_summary")} <strong style={{color:"#c4b5fd"}}>{config.ueberstundenMindestStunden}h</strong> · {t("zuschlag_summary")} <strong style={{color:"#c4b5fd"}}>{config.ueberstundenZuschlag}%</strong> · {t("stundenlohn_summary")} <strong style={{color:"#c4b5fd"}}>€ {config.stundenlohn}</strong>
+            </div>
+            </div>)}
+
+            {/* ── APP-EINSTELLUNGEN ── */}
+            {subView==="app" && (<div>
+
+              {/* Sprache */}
+              <div style={{fontSize:13,letterSpacing:2,color:config.appAccentColor||"#a78bfa",textTransform:"uppercase",marginBottom:14}}>
+                {t("sprache")}
+              </div>
+              <div style={{marginBottom:24}}>
+                <div style={{fontSize:11,color:config.appAccentColor||"#a78bfa",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>{t("sprache_waehlen")}</div>
+                <div style={{display:"flex",gap:10}}>
+                  {[{code:"de",flag:"🇩🇪",label:"Deutsch"},{code:"en",flag:"🇬🇧",label:"English"}].map(({code,flag,label})=>{
+                    const active=(config.appSprache||"de")===code;
+                    return (
+                      <button key={code} onClick={()=>setConfig(prev=>({...prev,appSprache:code}))}
+                        style={{flex:1,padding:"12px 8px",borderRadius:12,border:"1px solid",cursor:"pointer",fontFamily:"inherit",fontWeight:600,fontSize:14,display:"flex",flexDirection:"column",alignItems:"center",gap:4,transition:"all 0.15s",
+                          borderColor:active?(config.appAccentColor||"#a78bfa"):"rgba(255,255,255,0.1)",
+                          background:active?`${config.appAccentColor||"#a78bfa"}22`:"rgba(255,255,255,0.04)",
+                          color:active?(config.appAccentColor||"#a78bfa"):"#9ca3af"}}>
+                        <span style={{fontSize:26}}>{flag}</span>
+                        <span>{label}</span>
+                        {active && <span style={{fontSize:10,opacity:0.7}}>{code==="de"?"✓ aktiv":"✓ active"}</span>}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Akzentfarbe */}
+              <div style={{fontSize:13,letterSpacing:2,color:config.appAccentColor||"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+                {t("akzentfarbe")}
+              </div>
+              <div style={{marginBottom:8}}>
+                <div style={{fontSize:11,color:config.appAccentColor||"#a78bfa",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>{t("farbe_waehlen")}</div>
+                <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:10,marginBottom:12}}>
+                  {[
+                    {color:"#a78bfa",label:"Lila"},
+                    {color:"#60a5fa",label:"Blau"},
+                    {color:"#34d399",label:"Grün"},
+                    {color:"#f59e0b",label:"Gold"},
+                    {color:"#f87171",label:"Rot"},
+                    {color:"#fb923c",label:"Orange"},
+                    {color:"#38bdf8",label:"Cyan"},
+                    {color:"#e879f9",label:"Pink"},
+                    {color:"#a3e635",label:"Lime"},
+                    {color:"#94a3b8",label:"Grau"},
+                  ].map(({color,label})=>(
+                    <button key={color} onClick={()=>setConfig(prev=>({...prev,appAccentColor:color}))}
+                      title={label}
+                      style={{aspectRatio:"1",borderRadius:12,border:(config.appAccentColor||"#a78bfa")===color?"3px solid #fff":"2px solid transparent",background:color,cursor:"pointer",transition:"transform 0.1s",transform:(config.appAccentColor||"#a78bfa")===color?"scale(1.15)":"scale(1)"}}>
+                    </button>
+                  ))}
+                </div>
+                <div style={{display:"flex",alignItems:"center",gap:10}}>
+                  <span style={{fontSize:12,color:"#6b7280"}}>{t("eigene_farbe")}</span>
+                  <input type="color" value={config.appAccentColor||"#a78bfa"}
+                    onChange={e=>setConfig(prev=>({...prev,appAccentColor:e.target.value}))}
+                    style={{width:44,height:32,borderRadius:8,border:"1px solid rgba(255,255,255,0.15)",background:"none",cursor:"pointer",padding:2}} />
+                  <span style={{fontSize:13,color:config.appAccentColor||"#a78bfa",fontWeight:700}}>{config.appAccentColor||"#a78bfa"}</span>
+                </div>
+              </div>
+              <div style={{marginTop:12,padding:14,borderRadius:12,border:`1px solid ${config.appAccentColor||"#a78bfa"}44`,background:`${config.appAccentColor||"#a78bfa"}11`,fontSize:13,color:"#9ca3af"}}>
+                {t("vorschau")} <strong style={{color:config.appAccentColor||"#a78bfa"}}>{t("vorschau_text")}</strong> {t("vorschau_desc")}
+              </div>
+
+              {/* Startansicht */}
+              <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20,marginTop:24}}>
+                {t("startansicht")}
+              </div>
+              <div style={{fontSize:12,color:"#6b7280",marginBottom:12}}>{t("startansicht_hint")}</div>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:20}}>
+                {[
+                  {id:"erfassen",icon:"⏱",labelKey:"nav_erfassen"},
+                  {id:"woche",icon:"🗓️",labelKey:"nav_woche"},
+                  {id:"monat",icon:"📅",labelKey:"nav_monat"},
+                  {id:"jahr",icon:"📆",labelKey:"nav_jahr"},
+                  {id:"netto",icon:"💶",labelKey:"nav_netto"},
+                  {id:"einstellungen",icon:"⚙️",labelKey:"nav_einstellungen"},
+                ].map(tab=>(
+                  <button key={tab.id} onClick={()=>setConfig(prev=>({...prev,appStartView:tab.id}))}
+                    style={{padding:"10px 12px",borderRadius:12,border:"1px solid",cursor:"pointer",fontFamily:"inherit",fontWeight:600,fontSize:13,textAlign:"left",display:"flex",alignItems:"center",gap:8,
+                      borderColor:(config.appStartView||"erfassen")===tab.id?(config.appAccentColor||"#a78bfa"):"rgba(255,255,255,0.1)",
+                      background:(config.appStartView||"erfassen")===tab.id?`${config.appAccentColor||"#a78bfa"}22`:"rgba(255,255,255,0.04)",
+                      color:(config.appStartView||"erfassen")===tab.id?(config.appAccentColor||"#a78bfa"):"#9ca3af"}}>
+                    <span style={{fontSize:18}}>{tab.icon}</span>{t(tab.labelKey)}
+                  </button>
+                ))}
+              </div>
+
+              {/* App zurücksetzen */}
+              <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+                {t("hintergrund")}
+              </div>
+              <div style={{fontSize:12,color:"#6b7280",marginBottom:14}}>{t("hintergrund_hint")}</div>
+              <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:10,marginBottom:16}}>
+                {[
+                  {labelKey:"bg_purple_night", bg:"linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%)"},
+                  {labelKey:"bg_ocean",         bg:"linear-gradient(135deg,#0a1628 0%,#0d3b6e 50%,#1a5276 100%)"},
+                  {labelKey:"bg_forest",        bg:"linear-gradient(135deg,#0d1f0f 0%,#1a3d1f 50%,#0f2d12 100%)"},
+                  {labelKey:"bg_volcano",       bg:"linear-gradient(135deg,#1a0500 0%,#4a1010 50%,#2d0a0a 100%)"},
+                  {labelKey:"bg_sunset",        bg:"linear-gradient(135deg,#1a0a00 0%,#4a2000 40%,#8b3a00 100%)"},
+                  {labelKey:"bg_sakura",        bg:"linear-gradient(135deg,#1a0a15 0%,#3d1030 50%,#1f0a1a 100%)"},
+                  {labelKey:"bg_midnight",      bg:"linear-gradient(135deg,#000000 0%,#0d0d0d 50%,#1a1a1a 100%)"},
+                  {labelKey:"bg_ice",           bg:"linear-gradient(135deg,#0a1520 0%,#0d2d4a 50%,#1a3a5c 100%)"},
+                  {labelKey:"bg_desert",        bg:"linear-gradient(135deg,#1a1200 0%,#3d2e00 50%,#2d2200 100%)"},
+                  {labelKey:"bg_navy",          bg:"linear-gradient(135deg,#050a1a 0%,#0a1535 60%,#0d1f4a 100%)"},
+                  {labelKey:"bg_black",         bg:"#0a0a0a"},
+                  {labelKey:"bg_darkgray",      bg:"linear-gradient(135deg,#111111 0%,#1c1c1c 100%)"},
+                ].map(({labelKey,bg})=>{
+                  const isSelected=(config.appHintergrund||"linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%)")=== bg;
+                  return (
+                    <button key={labelKey} onClick={()=>setConfig(prev=>({...prev,appHintergrund:bg}))}
+                      style={{padding:"0",borderRadius:14,border:isSelected?`2px solid ${config.appAccentColor||"#a78bfa"}`:"2px solid transparent",cursor:"pointer",overflow:"hidden",height:64,position:"relative",transition:"border 0.15s"}}>
+                      <div style={{width:"100%",height:"100%",background:bg,display:"flex",alignItems:"center",justifyContent:"center"}}>
+                        <span style={{fontSize:11,color:"rgba(255,255,255,0.85)",fontWeight:600,textShadow:"0 1px 4px rgba(0,0,0,0.8)",letterSpacing:0.3}}>{t(labelKey)}</span>
+                      </div>
+                      {isSelected && <div style={{position:"absolute",top:4,right:6,fontSize:14}}>✓</div>}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* App zurücksetzen */}
+              <div style={{fontSize:13,letterSpacing:2,color:"#a78bfa",textTransform:"uppercase",marginBottom:14,borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:20}}>
+                {t("app_reset")}
+              </div>
+              <button onClick={()=>{ if(window.confirm(t("app_reset_confirm"))) setConfig(prev=>({...prev,appName:"WorkTracker",appAccentColor:"#a78bfa",appStartView:"erfassen",appWaehrung:"€",appKompaktansicht:false,appHintergrund:"linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%)"})); }}
+                style={{width:"100%",padding:"13px",borderRadius:12,border:"1px dashed rgba(248,113,113,0.4)",background:"rgba(248,113,113,0.05)",color:"#f87171",cursor:"pointer",fontSize:14,fontFamily:"inherit",marginBottom:8}}>
+                {t("app_reset_btn")}
+              </button>
+              <button onClick={()=>{ if(window.confirm(t("alle_daten_confirm"))) { localStorage.removeItem("arbeitszeit_eintraege"); localStorage.removeItem("arbeitszeit_config"); window.location.reload(); } }}
+                style={{width:"100%",padding:"13px",borderRadius:12,border:"1px solid rgba(248,113,113,0.5)",background:"rgba(248,113,113,0.1)",color:"#f87171",cursor:"pointer",fontSize:14,fontFamily:"inherit",fontWeight:700,marginBottom:24}}>
+                {t("alle_daten_loeschen")}
+              </button>
+
+              {/* App-Info */}
+              <div style={{padding:16,background:"rgba(255,255,255,0.03)",borderRadius:12,border:"1px solid rgba(255,255,255,0.07)",fontSize:12,color:"#4b5563",textAlign:"center",lineHeight:1.8}}>
+                <div style={{fontSize:18,marginBottom:6}}>⚙️</div>
+                <div style={{color:"#6b7280",fontWeight:600}}>{config.appName||"WorkTracker"}</div>
+                <div>{t("app_info_label")}</div>
+                <div style={{marginTop:6,fontSize:11}}>{t("app_info_local")}</div>
+              </div>
+
+            </div>)}
+
+          </div>
+        )}
+      </div>
+
+      {/* Bottom Nav */}
+      <div style={{position:"fixed",bottom:0,left:0,right:0,background:"rgba(15,12,41,0.97)",backdropFilter:"blur(12px)",borderTop:"1px solid rgba(255,255,255,0.08)",display:"flex",justifyContent:"space-around",padding:"10px 0 20px"}}>
+        {[{id:"erfassen",icon:"⏱",labelKey:"nav_erfassen"},{id:"woche",icon:"🗓️",labelKey:"nav_woche"},{id:"monat",icon:"📅",labelKey:"nav_monat"},{id:"jahr",icon:"📆",labelKey:"nav_jahr"},{id:"netto",icon:"💶",labelKey:"nav_netto"},{id:"einstellungen",icon:"⚙️",labelKey:"nav_einstellungen"}].map(tab=>(
+          <button key={tab.id} onClick={()=>setView(tab.id)}
+            style={{background:"none",border:"none",cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:3,color:view===tab.id?(config.appAccentColor||"#a78bfa"):"#6b7280",fontSize:10,letterSpacing:0.5,transition:"color 0.2s",padding:"4px 8px"}}>
+            <span style={{fontSize:20}}>{tab.icon}</span>
+            {t(tab.labelKey)}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

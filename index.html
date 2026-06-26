@@ -1979,23 +1979,39 @@ function App() {
             {/* Zusätzliche steuerfreie Bezüge */}
             {(monatsSpesen > 0 || monatsKleider > 0) && (
               <div style={{background:"rgba(52,211,153,0.08)",border:"1px solid rgba(52,211,153,0.25)",borderRadius:16,padding:20,marginBottom:12}}>
-                <div style={{fontSize:11,letterSpacing:3,color:"#34d399",marginBottom:12,textTransform:"uppercase"}}>✅ {t("gesamt_steuerfrei")}</div>
+                <div style={{fontSize:11,letterSpacing:3,color:"#34d399",marginBottom:14,textTransform:"uppercase"}}>✅ Steuerfreie Bezüge</div>
                 {monatsSpesen > 0 && (
-                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
-                    <span style={{color:"#9ca3af"}}>🍽️ Spesen ({Math.round(monatsSpesen/Number(config.spesenBetrag))} Tage × € {Number(config.spesenBetrag).toFixed(2)})</span>
-                    <span style={{color:"#34d399",fontWeight:600}}>+ € {monatsSpesen.toFixed(2)}</span>
+                  <div style={{marginBottom:10}}>
+                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",fontSize:13}}>
+                      <div>
+                        <div style={{color:"#e8e0f0",fontWeight:600}}>🍽️ Spesen (steuerfrei)</div>
+                        <div style={{color:"#6b7280",fontSize:11,marginTop:2}}>
+                          {Math.round(monatsSpesen/Number(config.spesenBetrag))} Tage × € {Number(config.spesenBetrag).toFixed(2)}
+                        </div>
+                      </div>
+                      <span style={{color:"#34d399",fontWeight:700,fontSize:15}}>+ € {monatsSpesen.toFixed(2)}</span>
+                    </div>
                   </div>
                 )}
                 {monatsKleider > 0 && (
-                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,fontSize:13}}>
-                    <span style={{color:"#9ca3af"}}>👕 Kleiderreinigung (× € {Number(config.kleiderreinigungBetrag||0).toFixed(2)}/Tag)</span>
-                    <span style={{color:"#60a5fa",fontWeight:600}}>+ € {monatsKleider.toFixed(2)}</span>
+                  <div style={{marginBottom:10}}>
+                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",fontSize:13}}>
+                      <div>
+                        <div style={{color:"#e8e0f0",fontWeight:600}}>👕 Wäschegeld (steuerfrei)</div>
+                        <div style={{color:"#6b7280",fontSize:11,marginTop:2}}>
+                          € {Number(config.kleiderreinigungBetrag||0).toFixed(2)} / Arbeitstag
+                        </div>
+                      </div>
+                      <span style={{color:"#34d399",fontWeight:700,fontSize:15}}>+ € {monatsKleider.toFixed(2)}</span>
+                    </div>
                   </div>
                 )}
-                <div style={{display:"flex",justifyContent:"space-between",paddingTop:8,borderTop:"1px solid rgba(52,211,153,0.2)",fontWeight:700,fontSize:13}}>
-                  <span style={{color:"#34d399"}}>{t("gesamt_steuerfrei")}</span>
-                  <span style={{color:"#34d399"}}>+ € {(monatsSpesen + monatsKleider).toFixed(2)}</span>
-                </div>
+                {monatsSpesen > 0 && monatsKleider > 0 && (
+                  <div style={{display:"flex",justifyContent:"space-between",paddingTop:10,borderTop:"1px solid rgba(52,211,153,0.2)",fontWeight:700,fontSize:13}}>
+                    <span style={{color:"#34d399"}}>Gesamt steuerfrei</span>
+                    <span style={{color:"#34d399"}}>+ € {(monatsSpesen + monatsKleider).toFixed(2)}</span>
+                  </div>
+                )}
               </div>
             )}
 

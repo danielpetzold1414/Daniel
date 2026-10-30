@@ -1,6 +1,6 @@
-// WorkTracker Service Worker – macht die App offline nutzbar.
+// LohnRadar Service Worker – macht die App offline nutzbar.
 // Bei jeder neuen App-Version die Nummer erhöhen, damit Handys die neue Version laden.
-const CACHE = "worktracker-v3";
+const CACHE = "lohnradar-v4";
 const DATEIEN = [
   "./",
   "./index.html",
@@ -22,12 +22,17 @@ self.addEventListener("activate", e => {
 
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
-  const istSeite = e.request.mode === "navigate" || e.request.url.endsWith("/app.js");
-  if (istSeite) {
-    // App-Seite: erst online versuchen (für Updates), sonst gespeicherte Version
+  const istNavigation = e.request.mode === "navigate";
+  const url = e.request.url;
+  const immerOnline = istNavigation || url.endsWith("/app.js") || url.endsWith(".webmanifest");
+  if (immerOnline) {
+    // App-Seite und Manifest: erst online versuchen (für Updates), sonst gespeicherte Version
+    const schluessel = istNavigation ? "./index.html" : e.request;
     e.respondWith(
-      fetch(e.request).then(r => { const k = r.clone(); caches.open(CACHE).then(c => c.put(e.request.mode === "navigate" ? "./index.html" : e.request, k)); return r; })
-        .catch(() => caches.match(e.request.mode === "navigate" ? "./index.html" : e.request))
+      fetch(e.request).then(r => {
+        if (r.ok) { const k = r.clone(); caches.open(CACHE).then(c => c.put(schluessel, k)); }
+        return r;
+      }).catch(() => caches.match(schluessel))
     );
   } else {
     // Bibliotheken, Icons, Schriften: aus dem Speicher, sonst laden und merken

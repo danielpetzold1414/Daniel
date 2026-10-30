@@ -1,6 +1,6 @@
 {
-  "name": "WorkTracker – Arbeitszeit & Lohn",
-  "short_name": "WorkTracker",
+  "name": "LohnRadar – Arbeitszeit & Lohn",
+  "short_name": "LohnRadar",
   "description": "Arbeitszeiten erfassen, Überstunden, Zuschläge und Netto-Lohn berechnen.",
   "lang": "de",
   "start_url": "./",
